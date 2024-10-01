@@ -14657,7 +14657,7 @@ body[data-bs-theme=dark] .breadcrumb-item.active {
   height: auto;               
   padding: 20px;              
   background-color: #fff;
-  box-shadow: 15px 20px 40px #5557;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
   border-radius: 13px;
   overflow: hidden;
 }
