@@ -14657,19 +14657,9 @@ body[data-bs-theme=dark] .breadcrumb-item.active {
   height: auto;               
   padding: 20px;              
   background-color: #fff;
-  box-shadow: 25px 30px 55px #5557;
+  box-shadow: 15px 20px 40px #5557;
   border-radius: 13px;
   overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .auth-page {
-    position: static; /* Nonaktifkan absolute */
-    left: auto;      /* Reset left */
-    transform: none; /* Nonaktifkan transform */
-    height: auto;    /* Sesuaikan tinggi jika perlu */
-    width: 100%;     /* Pastikan lebar 100% pada ponsel */
-  }
 }
 
 @media (max-width: 576px) {
