@@ -14664,21 +14664,11 @@ body[data-bs-theme=dark] .breadcrumb-item.active {
 
 @media (max-width: 768px) {
   .auth-page {
-    display: flex;
-    justify-content: center; /* Mencentralisasi secara horizontal */
-    align-items: center;     /* Mencentralisasi secara vertikal */
-    height: 100vh;           /* Memastikan tinggi halaman penuh agar elemen bisa di-center secara vertikal */
-    box-sizing: border-box;  /* Memastikan padding diatur dengan benar */
-  }
-  
-  .container-box {
-    width: 100%;               /* Membuat kontainer responsif */
-    max-width: 550px;         /* Membatasi lebar maksimal */
-    padding: 20px;            /* Menambahkan padding dalam kontainer */
-    background-color: #fff;   /* Menetapkan warna latar belakang */
-    box-shadow: 25px 30px 55px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-    border-radius: 13px;      /* Sudut melengkung */
-    overflow: hidden;         /* Menghindari overflow konten */
+    position: static; /* Nonaktifkan absolute */
+    left: auto;      /* Reset left */
+    transform: none; /* Nonaktifkan transform */
+    height: auto;    /* Sesuaikan tinggi jika perlu */
+    width: 100%;     /* Pastikan lebar 100% pada ponsel */
   }
 }
 
@@ -14689,6 +14679,5 @@ body[data-bs-theme=dark] .breadcrumb-item.active {
     transform: none; /* Nonaktifkan transform */
     height: auto;    /* Sesuaikan tinggi jika perlu */
     width: 100%;     /* Pastikan lebar 100% pada ponsel */
-    padding: 20px;   /* Tambahkan padding jika diperlukan */
   }
 }
