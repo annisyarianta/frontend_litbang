@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Login | Rumah Inovasi</title>
+		<title>Ubah Kata Sandi | Rumah Inovasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
@@ -44,10 +44,6 @@
 				border-radius: 10px;
 				box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 			}
-
-            .welcome {
-                font-size: 15px;
-            }
 		</style>
 	</head>
 
@@ -64,31 +60,16 @@
 				</div>
 				<div class="auth-content my-auto">
 					<div class="text-center">
-						<h3 class="mb-0 fw-bold">LOGIN</h3>
-						<p class="mt-2 welcome fw-semibold">
-							Hi, Selamat Datang di <span class="text-primary">#RumahInovasi</span> 
+						<h3 class="mb-0 fw-bold">Ubah Kata Sandi</h3>
+						<p class="text-muted mt-2">
+							Masukkan kata sandi baru
 						</p>
 					</div>
-					<form class="mt-4 pt-2" action="dashboard.html">
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-							<input
-								type="text"
-								class="form-control"
-								id="email"
-								placeholder="Masukkan email anda" />
-						</div>
+					<form class="mt-4 pt-2" action="#">
 						<div class="mb-3">
 							<div class="d-flex align-items-start">
 								<div class="flex-grow-1">
-									<label class="form-label">Kata Sandi</label>
-								</div>
-								<div class="flex-shrink-0">
-									<a
-										href="auth-resetpw.html"
-										class="text-muted"
-										>Lupa kata sandi?</a
-									>
+									<label class="form-label">Password</label>
 								</div>
 							</div>
 							<div class="input-group auth-pass-inputgroup">
@@ -106,40 +87,35 @@
 								</button>
 							</div>
 						</div>
-						<div class="row mb-4">
-							<div class="col">
-								<div class="form-check">
-									<input
-										class="form-check-input"
-										type="checkbox"
-										id="remember-check" />
-									<label
-										class="form-check-label"
-										for="remember-check">
-										Ingat Saya
-									</label>
+						<div class="mb-5">
+							<div class="d-flex align-items-start">
+								<div class="flex-grow-1">
+									<label class="form-label">Re-enter password</label>
 								</div>
 							</div>
+							<div class="input-group auth-pass-inputgroup">
+								<input
+									type="password"
+									class="form-control"
+									placeholder="Masukkan ulang kata sandi"
+									aria-label="Password"
+									aria-describedby="password-addon" />
+								<button
+									class="btn btn-light shadow-none ms-0"
+									type="button"
+									id="password-addon">
+									<i class="mdi mdi-eye-outline"></i>
+								</button>
+							</div>
 						</div>
-						<div class="mb-3">
+						<div class="mb-5">
 							<button
 								class="btn btn-primary w-100 waves-effect waves-light"
 								type="submit">
-								Login
+								Ubah kata sandi
 							</button>
 						</div>
 					</form>
-
-					<div class="mt-5 text-center">
-						<p class="mb-0">
-							Belum punya akun?
-							<a
-								href="#"
-								class="text-primary fw-semibold">
-								Daftar
-							</a>
-						</p>
-					</div>
 				</div>
 				<div class="text-muted mt-4 mt-md-5 text-center">
 					<p class="mb-0">
