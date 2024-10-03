@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Lupa Kata Sandi | Rumah Inovasi</title>
+		<title>Berhasil Buat Akun | Rumah Inovasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
@@ -64,43 +64,21 @@
 				</div>
 				<div class="auth-content my-auto">
 					<div class="text-center">
-						<h3 class="mb-0 fw-bold">Forget Password</h3>
-						<p class="text-muted mt-2">
-							Masukkan email yang Anda gunakan saat mendaftar.
-						</p>
-					</div>
-					<form class="needs-validation mt-4 pt-2"
-					novalidate
-					action="auth-forgetpw-success.html">
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-							<input
-								type="email"
-								class="form-control"
-								id="email"
-								placeholder="Masukkan email anda" required/>
-							<div class="invalid-feedback">
-								Please Enter Email
+						<div class="avatar-lg mx-auto">
+							<div class="avatar-title rounded-circle bg-light">
+								<i
+									class="bx bx-user-plus h2 mb-0 text-primary"></i>
 							</div>
 						</div>
-						<div class="mb-3 mt-4">
-							<button
-								class="btn btn-primary w-100 waves-effect waves-light"
-								type="submit">
-								Submit
-							</button>
+						<div class="p-2 mt-4">
+							<h4>Berhasil!</h4>
+							<p class="text-muted">
+								Akun Anda berhasil dibuat. Silakan login kembali
+							</p>
+							<div class="mt-4">
+								<a href="login.html" class="btn btn-primary w-100">Login</a>
+							</div>
 						</div>
-					</form>
-
-					<div class="mt-5 text-center">
-						<p class="text-muted mb-0">
-							Ingat kata sandi?
-							<a
-								href="login.html"
-								class="text-primary fw-semibold">
-								Login
-							</a>
-						</p>
 					</div>
 				</div>
 				<div class="text-muted mt-4 mt-md-5 text-center">
@@ -126,7 +104,5 @@
 		<script src="assets/libs/pace-js/pace.min.js"></script>
 		<!-- password addon init -->
 		<script src="assets/js/pages/pass-addon.init.js"></script>
-		<!-- validation init -->
-		<script src="assets/js/pages/validation.init.js"></script>
 	</body>
 </html>
