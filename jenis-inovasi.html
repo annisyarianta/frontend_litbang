@@ -134,7 +134,7 @@
 							</li>
 
 							<li>
-								<a href="jenis_inovasi.html">
+								<a href="jenis-inovasi.html">
 									<i class='bx bx-bulb'></i>									
 									<span>Jenis Inovasi</span>
 								</a>
@@ -241,83 +241,81 @@
 							</div>
 						</div>
 						<!-- end page title -->
-
+						<!-- start table -->
 						<div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Log Aktivitas</h4>
-                                        <p class="card-title-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, temporibus maiores voluptates quaerat eius magni sint illum consequatur placeat sapiente laudantium consequuntur cumque dolores ad, vel eum necessitatibus? Distinctio, quos.
-                                        </p>
+									<div class="card-header">
+                                        <button type="button" class="btn btn-primary btn-sm waves-effect btn-label waves-light"><i class="bx bx-plus label-icon"></i>Tambah Data</button>
                                     </div>
                                     <div class="card-body">
-        
-                                        <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
-                                            <thead>
-												<tr>
-													<th>Id User</th>
-													<th>Tanggal</th>
-													<th>Aksi</th>
-													<th>Jenis Data</th>
-													<th>Keterangan</th>
-												</tr>
-                                            </thead>
-                                            <tbody>
-												<tr>
-													<td>Cedric Kelly</td>
-													<td>Senior Javascript Developer</td>
-													<td>Edinburgh</td>
-													<td>22</td>
-													<td>2012/03/29</td>
-												</tr>
-												<tr>
-													<td>Airi Satou</td>
-													<td>Accountant</td>
-													<td>Tokyo</td>
-													<td>33</td>
-													<td>2008/11/28</td>
-												</tr>
-												<tr>
-													<td>Brielle Williamson</td>
-													<td>Integration Specialist</td>
-													<td>New York</td>
-													<td>61</td>
-													<td>2012/12/02</td>
-												</tr>
-												<tr>
-													<td>Herrod Chandler</td>
-													<td>Sales Assistant</td>
-													<td>San Francisco</td>
-													<td>59</td>
-													<td>2012/08/06</td>
-												</tr>
-												<tr>
-													<td>Rhona Davidson</td>
-													<td>Integration Specialist</td>
-													<td>Tokyo</td>
-													<td>55</td>
-													<td>2010/10/14</td>
-												</tr>
-												<tr>
-													<td>Colleen Hurst</td>
-													<td>Javascript Developer</td>
-													<td>San Francisco</td>
-													<td>39</td>
-													<td>2009/09/15</td>
-												</tr>
-												<tr>
-													<td>Sonya Frost</td>
-													<td>Software Engineer</td>
-													<td>Edinburgh</td>
-													<td>23</td>
-													<td>2008/12/13</td>
-												</tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="table-responsive">
+                                            <table class="table table-editable table-nowrap align-middle table-edits" id="datatable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Nama Jenis</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr data-id="1">
+                                                        <td data-field="id" style="width: 80px">1</td>
+                                                        <td data-field="name">David McHenry</td>
+                                                        <td style="width: 300px">
+                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="2">
+                                                        <td data-field="id">2</td>
+                                                        <td data-field="name">Frank Kirk</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="3">
+                                                        <td data-field="id">3</td>
+                                                        <td data-field="name">Rafael Morales</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="4">
+                                                        <td data-field="id">4</td>
+                                                        <td data-field="name">Mark Ellison</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+					</div>
+				</div>
 				<footer class="footer">
 					<div class="container-fluid">
 						<div class="row">
@@ -488,5 +486,7 @@
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
 		<script src="assets/js/app.js"></script>
+		<!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 	</body>
 </html>
