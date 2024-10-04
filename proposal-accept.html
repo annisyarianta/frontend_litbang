@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Jenis Inovasi | Rumah Inovasi</title>
+		<title>Data Inovasi | Rumah Inovasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
@@ -140,7 +140,7 @@
 								</a>
 							</li>
 
-							<li>
+                            <li>
 								<a href="#" class="has-arrow">
 									<i data-feather="file-text"></i>
 									<span
@@ -171,7 +171,7 @@
 										>Data Pengguna</span
 									>
 								</a>
-								<ul class="sub-menu" aria-expanded="false">
+								<ul class="sub-menu" aria-expanded="true">
                                     <li><a href="#">Admin</a></li>
                                     <li>
                                         <a href="#">Pegawai</a>
@@ -233,7 +233,7 @@
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
 									<h3 class="mb-sm-0">
-										Jenis Inovasi
+										Proposal Accept
 									</h3>
 
 									<div class="page-title-right">
@@ -243,8 +243,13 @@
 													>Inovasi</a
 												>
 											</li>
+											<li class="breadcrumb-item">
+												<a href="#"
+													>Data Inovasi</a
+												>
+											</li>
 											<li class="breadcrumb-item active">
-												Jenis Inovasi
+												Proposal Accept
 											</li>
 										</ol>
 									</div>
@@ -252,81 +257,136 @@
 							</div>
 						</div>
 						<!-- end page title -->
-						<!-- start table -->
 						<div class="row">
                             <div class="col-12">
                                 <div class="card">
-									<div class="card-header d-flex justify-content-end">
+                                    <div class="card-header d-flex justify-content-end">
                                         <button type="button" class="btn btn-primary waves-effect btn-label waves-light"><i class="bx bx-plus label-icon"></i>Tambah Data</button>
                                     </div>
                                     <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-editable table-nowrap align-middle table-edits" id="datatable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID</th>
-                                                        <th>Nama Jenis</th>
-                                                        <th>Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr data-id="1">
-                                                        <td data-field="id" style="width: 80px">1</td>
-                                                        <td data-field="name">David McHenry</td>
-                                                        <td style="width: 300px">
-                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr data-id="2">
-                                                        <td data-field="id">2</td>
-                                                        <td data-field="name">Frank Kirk</td>
-                                                        <td>
-                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr data-id="3">
-                                                        <td data-field="id">3</td>
-                                                        <td data-field="name">Rafael Morales</td>
-                                                        <td>
-                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr data-id="4">
-                                                        <td data-field="id">4</td>
-                                                        <td data-field="name">Mark Ellison</td>
-                                                        <td>
-                                                            <a class="btn btn-outline-warning btn-sm edit" title="Edit">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-															<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                                </table>
-                                        </div>
+                                        <table id="datatable" class="table table-bordered dt-responsive nowrap w-100">
+                                            <thead>
+												<tr>
+													<th>Judul Inovasi</th>
+													<th>Deskripsi</th>
+													<th>Kategori</th>
+													<th>Tanggal Pengajuan</th>
+													<th>Status</th>
+                                                    <th>Aksi</th>
+												</tr>
+                                            </thead>
+                                            <tbody>
+												<tr>
+													<td>Cedric Kelly</td>
+													<td>Senior Javascript Developer</td>
+													<td>Edinburgh</td>
+													<td>2012/03/29</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Airi Satou</td>
+													<td>Accountant</td>
+													<td>Tokyo</td>
+													<td>2008/11/28</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Brielle Williamson</td>
+													<td>Integration Specialist</td>
+													<td>New York</td>
+													<td>2012/12/02</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Herrod Chandler</td>
+													<td>Sales Assistant</td>
+													<td>San Francisco</td>
+													<td>2012/08/06</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Rhona Davidson</td>
+													<td>Integration Specialist</td>
+													<td>Tokyo</td>
+													<td>2010/10/14</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Colleen Hurst</td>
+													<td>Javascript Developer</td>
+													<td>San Francisco</td>
+													<td>2009/09/15</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Sonya Frost</td>
+													<td>Software Engineer</td>
+													<td>Edinburgh</td>
+													<td>2008/12/13</td>
+													<td>Verified</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-warning btn-sm edit" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+												</tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-					</div>
-				</div>
 				<footer class="footer">
 					<div class="container-fluid">
 						<div class="row">
@@ -496,8 +556,8 @@
         <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
-		<script src="assets/js/app.js"></script>
 		<!-- Buttons examples -->
         <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+		<script src="assets/js/app.js"></script>
 	</body>
 </html>
