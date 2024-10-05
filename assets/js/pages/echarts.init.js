@@ -106,22 +106,20 @@ var pieColors = getChartColorsArray("#pie-chart"),
 		legend: {
 			orient: "vertical",
 			left: "left",
-			data: ["Laptop", "Tablet", "Mobile", "Others", "Desktop"],
+			data: ["Digital", "Non Digital", "Lainnya"],
 			textStyle: { color: "#858d98" },
 		},
 		color: pieColors,
 		series: [
 			{
-				name: "Total sales",
+				name: "Jumlah inovasi",
 				type: "pie",
 				radius: "55%",
 				center: ["50%", "60%"],
 				data: [
-					{ value: 335, name: "Laptop" },
-					{ value: 310, name: "Tablet" },
-					{ value: 234, name: "Mobile" },
-					{ value: 135, name: "Others" },
-					{ value: 1548, name: "Desktop" },
+					{ value: 335, name: "Non Digital" },
+					{ value: 135, name: "Lainnya" },
+					{ value: 550, name: "Digital" },
 				],
 				itemStyle: {
 					emphasis: {
