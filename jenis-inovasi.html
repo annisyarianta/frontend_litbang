@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
+		<!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
@@ -366,7 +368,7 @@
 															</a>
 															<a
 																class="btn btn-outline-danger btn-sm delete ms-2"
-																title="Delete">
+																title="Delete" id="sa-warning">
 																<i
 																	class="fas fa-trash-alt"></i>
 															</a>
@@ -385,7 +387,7 @@
 															</a>
 															<a
 																class="btn btn-outline-danger btn-sm delete ms-2"
-																title="Delete">
+																title="Delete" id="sa-warning">
 																<i
 																	class="fas fa-trash-alt"></i>
 															</a>
@@ -404,7 +406,7 @@
 															</a>
 															<a
 																class="btn btn-outline-danger btn-sm delete ms-2"
-																title="Delete">
+																title="Delete" id="sa-warning">
 																<i
 																	class="fas fa-trash-alt"></i>
 															</a>
@@ -597,5 +599,30 @@
 		</script>
 		<!-- Datatable init js -->
 		<script src="assets/js/pages/datatables.init.js"></script>
+		<!-- Sweet Alerts js -->
+        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+        <!-- Sweet alert init js-->
+		<script>
+			document
+		.getElementById("sa-warning")
+		.addEventListener("click", function () {
+			Swal.fire({
+				title: "Are you sure?",
+				text: "You won't be able to revert this!",
+				icon: "warning",
+				showCancelButton: !0,
+				confirmButtonColor: "#2ab57d",
+				cancelButtonColor: "#fd625e",
+				confirmButtonText: "Yes, delete it!",
+			}).then(function (e) {
+				e.value &&
+					Swal.fire(
+						"Deleted!",
+						"Your file has been deleted.",
+						"success",
+					);
+			});
+		});
+		</script>
 	</body>
 </html>
