@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
+		<!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
@@ -282,13 +284,13 @@
 													<td class="text-center">2012/03/29</td>
 													<td class="text-center"><span class="badge bg-secondary rounded-pill">Pending</span></td>
                                                     <td class="text-center">
-                                                        <a class="btn btn-outline-success btn-sm delete" title="Setujui">
+                                                        <a class="btn btn-outline-success btn-sm delete" title="Setujui" id="sa-title">
                                                             <i class="fas fa-check"></i>
                                                         </a>
                                                         <a href="proposal-pending-edit.html" class="btn btn-outline-warning btn-sm edit ms-2" title="Revisi">
                                                             <i class="fas fa-pencil-alt"></i>
                                                         </a>
-                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Tolak">
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2" title="Tolak"id="sa-params">
                                                             <i class="fas fa-times"></i>
                                                         </a>
                                                     </td>
@@ -525,5 +527,38 @@
 		<!-- Buttons examples -->
         <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 		<script src="assets/js/app.js"></script>
+		<!-- Sweet Alerts js -->
+        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+        <!-- Sweet alert init js-->
+		<script>
+			document.getElementById("sa-title").addEventListener("click", function () {
+				Swal.fire({
+					title: "Setujui Proposal?",
+					text: "Are you sure?",
+					icon: "success",
+					confirmButtonColor: "#5156be",
+				});
+			}),
+			document.getElementById("sa-params").addEventListener("click", function () {
+				Swal.fire({
+					title: "Are you sure?",
+					text: "Anda yakin akan menolak proposal ini?",
+					icon: "warning",
+					showCancelButton: !0,
+					confirmButtonText: "Yes, reject it!",
+					cancelButtonText: "Cancel",
+					confirmButtonClass: "btn btn-primary mt-2",
+					cancelButtonClass: "btn btn-secondary ms-2 mt-2",
+					buttonsStyling: !1,
+				}).then(function (e) {
+					e.value &&
+					Swal.fire(
+						"Rejected!",
+						"Proposal ditolak.",
+						"error",
+					);
+				});
+			});
+		</script>
 	</body>
 </html>
