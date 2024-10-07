@@ -7,7 +7,10 @@
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
 		<!-- choices css -->
-        <link href="assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" type="text/css" />
+		<link
+			href="assets/libs/choices.js/public/assets/styles/choices.min.css"
+			rel="stylesheet"
+			type="text/css" />
 
 		<!-- Bootstrap Css -->
 		<link
@@ -63,54 +66,114 @@
 				<div class="auth-content my-auto">
 					<div class="text-center">
 						<h3 class="mb-0 fw-bold">Buat Akun Baru</h3>
-						<p class="text-muted mt-2">Registrasi sebagai pengguna Umum</p>
+						<p class="text-muted mt-2">
+							Registrasi sebagai pengguna Umum
+						</p>
 					</div>
-					<form class="needs-validation mt-4 pt-2" novalidate action="auth-otp-regist.html">
+					<form
+						class="needs-validation mt-4 pt-2"
+						novalidate
+						onsubmit="return validateForm()"
+						action="auth-otp-regist.html">
 						<div class="mb-3">
-							<label for="nama" class="form-label">Nama Lengkap</label>
-							<input type="text" class="form-control" id="nama" placeholder="Masukkan nama anda" required>
+							<label for="nama" class="form-label"
+								>Nama Lengkap</label
+							>
+							<input
+								type="text"
+								class="form-control"
+								id="nama"
+								placeholder="Masukkan nama anda"
+								required />
 							<div class="invalid-feedback">
 								Please Enter Name
-							</div>  
+							</div>
 						</div>
 						<div class="mb-3">
 							<label for="nik" class="form-label">NIK</label>
-							<input type="text" class="form-control" id="nik" placeholder="Masukkan NIK anda" required>
-							<div class="invalid-feedback">
-								Please Enter NIK
-							</div>  
+							<input
+								type="text"
+								class="form-control"
+								id="nik"
+								placeholder="Masukkan NIK anda"
+								required />
+							<div class="invalid-feedback">Please Enter NIK</div>
 						</div>
 						<div class="mb-3">
-							<label for="useremail" class="form-label">Email</label>
-							<input type="email" class="form-control" id="useremail" placeholder="Masukkan email anda" required>  
+							<label for="useremail" class="form-label"
+								>Email</label
+							>
+							<input
+								type="email"
+								class="form-control"
+								id="useremail"
+								placeholder="Masukkan email anda"
+								required />
 							<div class="invalid-feedback">
 								Please Enter Email
-							</div>      
+							</div>
 						</div>
 						<div class="mb-3">
-							<label for="no_telp" class="form-label">No. Telp</label>
-							<input type="text" class="form-control" id="nip" placeholder="Masukkan nomor telepon" required>
+							<label for="no_telp" class="form-label"
+								>No. Telp</label
+							>
+							<input
+								type="text"
+								class="form-control"
+								id="nip"
+								placeholder="Masukkan nomor telepon"
+								required />
 							<div class="invalid-feedback">
 								Please Enter Phone Number
-							</div>  
+							</div>
 						</div>
 						<div class="mb-4">
-							<label for="userpassword" class="form-label">Password</label>
+							<label for="userpassword" class="form-label"
+								>Password</label
+							>
 							<div class="input-group auth-pass-inputgroup">
 								<input
 									type="password"
 									class="form-control"
+									id="userpassword"
 									placeholder="Masukkan kata sandi"
 									aria-label="Password"
-									aria-describedby="password-addon" required/>
+									aria-describedby="password-addon"
+									required />
 								<button
 									class="btn btn-light shadow-none ms-0"
 									type="button"
 									id="password-addon">
 									<i class="mdi mdi-eye-outline"></i>
 								</button>
-								<div class="invalid-feedback">
-									Please Enter Password
+								<div
+									class="invalid-feedback"
+									id="password-error">
+								</div>
+							</div>
+						</div>
+						<div class="mb-4">
+							<label for="repassword" class="form-label"
+								>Konfirmasi Password</label
+							>
+							<div class="input-group auth-pass-inputgroup">
+								<input
+									type="password"
+									class="form-control"
+									id="repassword"
+									placeholder="Masukkan kembali kata sandi"
+									aria-label="Re-Password"
+									aria-describedby="repassword-addon"
+									required />
+								<button
+									class="btn btn-light shadow-none ms-0"
+									type="button"
+									id="repassword-addon">
+									<i class="mdi mdi-eye-outline"></i>
+								</button>
+								<div
+									class="invalid-feedback"
+									id="repassword-error">
 								</div>
 							</div>
 						</div>
@@ -120,17 +183,26 @@
 									<input
 										class="form-check-input"
 										type="checkbox"
-										id="remember-check" required/>
+										id="remember-check"
+										required />
 									<label
 										class="form-check-label text-muted fw-normal"
 										for="remember-check">
-										Saya setuju dengan <a href="#" class="text-primary">Syarat dan Ketentuan</a> yang berlaku
+										Saya setuju dengan
+										<a href="#" class="text-primary"
+											>Syarat dan Ketentuan</a
+										>
+										yang berlaku
 									</label>
 								</div>
 							</div>
 						</div>
 						<div class="mb-3">
-							<button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Register</button>
+							<button
+								class="btn btn-primary w-100 waves-effect waves-light"
+								type="submit">
+								Register
+							</button>
 						</div>
 					</form>
 
@@ -157,7 +229,7 @@
 			</div>
 		</div>
 
-		<!-- JAVASCRIPT -->		
+		<!-- JAVASCRIPT -->
 		<script src="assets/libs/jquery/jquery.min.js"></script>
 		<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/libs/metismenu/metisMenu.min.js"></script>
@@ -169,11 +241,11 @@
 		<!-- password addon init -->
 		<script src="assets/js/pages/pass-addon.init.js"></script>
 		<!-- validation init -->
-        <script src="assets/js/pages/validation.init.js"></script>
+		<script src="assets/js/pages/validation.init.js"></script>
 		<!-- form init js -->
-        <script src="assets/js/pages/form-advanced.init.js"></script>
+		<script src="assets/js/pages/form-advanced.init.js"></script>
 		<!-- choices js -->
-        <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+		<script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<script src="assets/js/app.js"></script>
 	</body>
 </html>

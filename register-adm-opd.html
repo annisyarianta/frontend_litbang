@@ -65,7 +65,7 @@
 						<h3 class="mb-0 fw-bold">Buat Akun Baru</h3>
 						<p class="text-muted mt-2">Registrasi sebagai Admin OPD</p>
 					</div>
-					<form class="needs-validation mt-4 pt-2" novalidate action="auth-otp-regist.html">
+					<form class="needs-validation mt-4 pt-2" novalidate onsubmit="return validateForm()" action="auth-otp-regist.html">
 						<div class="mb-3">
 							<label for="nama" class="form-label">Nama Lengkap</label>
 							<input type="text" class="form-control" id="nama" placeholder="Masukkan nama anda" required>
@@ -90,6 +90,9 @@
 								<option value="Choice 2">Balitbang Kab. Pesawaran</option>
 								<option value="Choice 3">Bagian Hukum</option>
 							</select>
+							<div class="invalid-feedback">
+								Please Choose One
+							</div> 
 						</div>
 						<div class="mb-3">
 							<label for="useremail" class="form-label">Email</label>
@@ -106,22 +109,52 @@
 							</div>  
 						</div>
 						<div class="mb-4">
-							<label for="userpassword" class="form-label">Password</label>
+							<label for="userpassword" class="form-label"
+								>Password</label
+							>
 							<div class="input-group auth-pass-inputgroup">
 								<input
 									type="password"
 									class="form-control"
+									id="userpassword"
 									placeholder="Masukkan kata sandi"
 									aria-label="Password"
-									aria-describedby="password-addon" required/>
+									aria-describedby="password-addon"
+									required />
 								<button
 									class="btn btn-light shadow-none ms-0"
 									type="button"
 									id="password-addon">
 									<i class="mdi mdi-eye-outline"></i>
 								</button>
-								<div class="invalid-feedback">
-									Please Enter Password
+								<div
+									class="invalid-feedback"
+									id="password-error">
+								</div>
+							</div>
+						</div>
+						<div class="mb-4">
+							<label for="repassword" class="form-label"
+								>Konfirmasi Password</label
+							>
+							<div class="input-group auth-pass-inputgroup">
+								<input
+									type="password"
+									class="form-control"
+									id="repassword"
+									placeholder="Masukkan kembali kata sandi"
+									aria-label="Re-Password"
+									aria-describedby="repassword-addon"
+									required />
+								<button
+									class="btn btn-light shadow-none ms-0"
+									type="button"
+									id="repassword-addon">
+									<i class="mdi mdi-eye-outline"></i>
+								</button>
+								<div
+									class="invalid-feedback"
+									id="repassword-error">
 								</div>
 							</div>
 						</div>
