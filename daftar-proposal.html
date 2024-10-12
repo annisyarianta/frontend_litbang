@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Jenis Inovasi | Rumah Inovasi</title>
+		<title>Daftar Proposal | Rumah Inovasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
@@ -15,32 +15,11 @@
 			type="text/css" />
 
 		<!-- DataTables -->
-		<link
-			href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
-			rel="stylesheet"
-			type="text/css" />
-		<link
-			href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
-			rel="stylesheet"
-			type="text/css" />
+		<link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
 		<!-- Responsive datatable examples -->
-		<link
-			href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
-			rel="stylesheet"
-			type="text/css" />
-
-		<!-- alertifyjs Css -->
-		<link
-			href="assets/libs/alertifyjs/build/css/alertify.min.css"
-			rel="stylesheet"
-			type="text/css" />
-
-		<!-- alertifyjs default themes  Css -->
-		<link
-			href="assets/libs/alertifyjs/build/css/themes/default.min.css"
-			rel="stylesheet"
-			type="text/css" />
+		<link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
 
 		<!-- Bootstrap Css -->
 		<link
@@ -146,39 +125,39 @@
 							<li>
 								<a href="dashboard.html">
 									<i data-feather="home"></i>
-									<span>Dashboard</span>
+									<span
+										>Dashboard</span
+									>
 								</a>
 							</li>
 
-							<li class="menu-title">Inovasi</li>
+							<li class="menu-title">
+								Inovasi
+							</li>
 
 							<li>
 								<a href="jenis-inovasi.html">
-									<i class="bx bx-bulb"></i>
+									<i class='bx bx-bulb'></i>									
 									<span>Jenis Inovasi</span>
 								</a>
 							</li>
 
-							<li>
+                            <li>
 								<a href="#" class="has-arrow">
 									<i data-feather="file-text"></i>
-									<span>Data Inovasi</span>
+									<span
+										>Data Inovasi</span
+									>
 								</a>
 								<ul class="sub-menu" aria-expanded="true">
-									<li>
-										<a href="daftar-proposal.html"
-											>Daftar Proposal</a
-										>
-									</li>
-									<li>
-										<a href="verifikasi-proposal.html"
-											>Verifikasi Proposal</a
-										>
-									</li>
-								</ul>
+									<li><a href="daftar-proposal.html">Daftar Proposal</a></li>
+                                    <li><a href="verifikasi-proposal.html">Verifikasi Proposal</a></li>
+                                </ul>
 							</li>
 
-							<li class="menu-title">Pengguna</li>
+							<li class="menu-title">
+								Pengguna
+							</li>
 
 							<li>
 								<a href="#">
@@ -190,39 +169,51 @@
 							<li>
 								<a href="#" class="has-arrow">
 									<i data-feather="users"></i>
-									<span>Data Pengguna</span>
+									<span
+										>Data Pengguna</span
+									>
 								</a>
-								<ul class="sub-menu" aria-expanded="false">
-									<li><a href="#">Admin</a></li>
-									<li>
-										<a href="#">Pegawai</a>
-									</li>
+								<ul class="sub-menu" aria-expanded="true">
+                                    <li><a href="#">Admin</a></li>
+                                    <li>
+                                        <a href="#">Pegawai</a>
+                                    </li>
 									<li><a href="#">Umum</a></li>
-								</ul>
+                                </ul>
 							</li>
 
-							<li class="menu-title">Kelola Konten</li>
+							<li class="menu-title">
+								Kelola Konten
+							</li>
 
 							<li>
 								<a href="#">
 									<i data-feather="layout"></i>
-									<span>Kelola Berita</span>
+									<span
+										>Kelola Berita</span
+									>
 								</a>
 							</li>
 
 							<li>
 								<a href="#">
 									<i data-feather="grid"></i>
-									<span>Kelola Galeri</span>
+									<span
+										>Kelola Galeri</span
+									>
 								</a>
 							</li>
 
-							<li class="menu-title">Pengaturan</li>
+							<li class="menu-title">
+								Pengaturan
+							</li>
 
 							<li>
 								<a href="#">
 									<i data-feather="settings"></i>
-									<span>Option Web</span>
+									<span
+										>Option Web</span
+									>
 								</a>
 							</li>
 						</ul>
@@ -243,7 +234,9 @@
 							<div class="col-12">
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
-									<h3 class="mb-sm-0">Jenis Inovasi</h3>
+									<h3 class="mb-sm-0">
+										Daftar Proposal
+									</h3>
 
 									<div class="page-title-right">
 										<ol class="breadcrumb m-0">
@@ -252,8 +245,13 @@
 													>Inovasi</a
 												>
 											</li>
+											<li class="breadcrumb-item">
+												<a href="#"
+													>Data Inovasi</a
+												>
+											</li>
 											<li class="breadcrumb-item active">
-												Jenis Inovasi
+												Daftar Proposal
 											</li>
 										</ol>
 									</div>
@@ -261,166 +259,95 @@
 							</div>
 						</div>
 						<!-- end page title -->
-						<!-- start table -->
 						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<div
-										class="card-header d-flex justify-content-end">
-										<button
-											type="button"
-											class="btn btn-primary waves-effect btn-label waves-light"
-											data-bs-toggle="modal"
-											data-bs-target="#staticBackdrop">
-											<i class="bx bx-plus label-icon"></i
-											>Tambah Data
-										</button>
-									</div>
-									<div
-										class="modal fade"
-										id="staticBackdrop"
-										data-bs-backdrop="static"
-										data-bs-keyboard="false"
-										tabindex="-1"
-										role="dialog"
-										aria-labelledby="staticBackdropLabel"
-										aria-hidden="true">
-										<div
-											class="modal-dialog modal-dialog-centered"
-											role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5
-														class="modal-title"
-														id="staticBackdropLabel">
-														Tambah Jenis Inovasi
-													</h5>
-													<button
-														type="button"
-														class="btn-close"
-														data-bs-dismiss="modal"
-														aria-label="Close"></button>
-												</div>
-												<div class="modal-body">
-													<form
-														action="javascript: void(0);">
-														<div class="mb-3">
-															<label
-																for="nama-jenis"
-																class="col-form-label"
-																>Nama
-																Jenis</label
-															>
-															<input
-																type="text"
-																class="form-control"
-																id="nama-jenis"
-																required />
-														</div>
-													</form>
-												</div>
-												<div class="modal-footer">
-													<button
-														type="button"
-														class="btn btn-light"
-														data-bs-dismiss="modal">
-														Cancel
-													</button>
-													<button
-														type="submit"
-														class="btn btn-primary"
-														data-bs-dismiss="modal"
-														id="alert-success">
-														Submit
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="table-responsive">
-											<table
-												class="table table-editable table-nowrap align-middle table-edits table-hover"
-												id="datatable">
-												<thead>
-													<tr>
-														<th>ID</th>
-														<th>Nama Jenis</th>
-														<th>Aksi</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr data-id="1">
-														<td
-															data-field="id"
-															style="width: 80px">1</td>
-														<td
-															data-field="nama-jenis">Digital</td>
-														<td
-															style="
-																width: 300px;
-															">
-															<a
-																class="btn btn-outline-warning btn-sm edit"
-																title="Edit">
-																<i
-																	class="fas fa-pencil-alt"></i>
-															</a>
-															<a
-																class="btn btn-outline-danger btn-sm delete ms-2"
-																title="Delete" id="sa-warning">
-																<i
-																	class="fas fa-trash-alt"></i>
-															</a>
-														</td>
-													</tr>
-													<tr data-id="2">
-														<td data-field="id">2</td>
-														<td
-															data-field="nama-jenis">Non Digital</td>
-														<td>
-															<a
-																class="btn btn-outline-warning btn-sm edit"
-																title="Edit">
-																<i
-																	class="fas fa-pencil-alt"></i>
-															</a>
-															<a
-																class="btn btn-outline-danger btn-sm delete ms-2"
-																title="Delete" id="sa-warning">
-																<i
-																	class="fas fa-trash-alt"></i>
-															</a>
-														</td>
-													</tr>
-													<tr data-id="3">
-														<td data-field="id">3</td>
-														<td
-															data-field="nama-jenis">Lainnya</td>
-														<td>
-															<a
-																class="btn btn-outline-warning btn-sm edit"
-																title="Edit">
-																<i
-																	class="fas fa-pencil-alt"></i>
-															</a>
-															<a
-																class="btn btn-outline-danger btn-sm delete ms-2"
-																title="Delete" id="sa-warning">
-																<i
-																	class="fas fa-trash-alt"></i>
-															</a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-end">
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light" onclick="window.location.href='tambah-proposal.html'"><i class="bx bx-plus label-icon"></i>Tambah Data</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="datatable" class="table table-bordered dt-responsive w-100 table-hover">
+                                            <thead>
+												<tr>
+													<th class="text-center" style="width: 220px">Judul Inovasi</th>
+													<th class="text-center" style="width: 250px">Deskripsi</th>
+													<th class="text-center" style="width: 120px">Kategori</th>
+													<th class="text-center" style="width: 120px">Tanggal Pengajuan</th>
+													<th class="text-center" style="width: 70px">Status</th>
+                                                    <th class="text-center" style="width: 100px">Aksi</th>
+												</tr>
+                                            </thead>
+                                            <tbody>
+												<tr>
+													<td>Aksi Konsumen Cerdas Ayo Mengadu (SI KOMENG)</td>
+													<td>Aksi Konsumen Cerdas Ayo mengadu (SI KOMENG) merupakan Sistem Informasi...</td>
+													<td class="text-center">Inovasi</td>
+													<td class="text-center">2008/11/28</td>
+													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+                                                    <td class="text-center">
+                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Aplikasi JDIH Kaltim Berbasis Android</td>
+													<td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit laboriosam...</td>
+													<td class="text-center">Riset</td>
+													<td class="text-center">2012/03/29</td>
+													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+                                                    <td class="text-center">
+                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>Aplikasi Simata Laut Kaltim (Sistem Informasi Tata Ruang Laut Kaltim)</td>
+													<td>Aplikasi yang dapat digunakan oleh masyarakat umum untuk memberikan akses...</td>
+													<td class="text-center">Inovasi</td>
+													<td class="text-center">2012/12/02</td>
+													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+                                                    <td class="text-center">
+                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td>CAP JEMPOL (lanCAr Posyandu dengan menJEMput Pakai Ojek Lansia)</td>
+													<td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit laboriosam...</td>
+													<td class="text-center">Riset</td>
+													<td class="text-center">2012/03/29</td>
+													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+                                                    <td class="text-center">
+                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
+                                                    </td>
+												</tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 				<footer class="footer">
 					<div class="container-fluid">
 						<div class="row">
@@ -480,7 +407,7 @@
 							>Light</label
 						>
 					</div>
-
+					
 					<div class="form-check form-check-inline">
 						<input
 							class="form-check-input"
@@ -493,7 +420,7 @@
 							>Fluid</label
 						>
 					</div>
-
+					
 					<div class="form-check form-check-inline">
 						<input
 							class="form-check-input"
@@ -577,28 +504,22 @@
 		<script src="assets/libs/feather-icons/feather.min.js"></script>
 		<!-- pace js -->
 		<script src="assets/libs/pace-js/pace.min.js"></script>
-		<script src="assets/js/app.js"></script>
+		<!-- Plugins js-->
+		<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+		<!-- dashboard init -->
+		<script src="assets/js/pages/dashboard.init.js"></script>
 		<!-- Required datatable js -->
-		<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-		<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+		<!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <!-- Datatable init js -->
+        <script src="assets/js/pages/datatables.init.js"></script>
 		<!-- Buttons examples -->
-		<script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-		<!-- Modal js -->
-		<script src="assets/js/pages/modal.init.js"></script>
-		<!-- Table Editable plugin -->
-		<script src="assets/libs/table-edits/build/table-edits.min.js"></script>
-		<script src="assets/js/pages/table-editable.int.js"></script>
-		<!-- alertifyjs js -->
-		<script src="assets/libs/alertifyjs/build/alertify.min.js"></script>
-		<script>
-			document
-				.getElementById("alert-success")
-				.addEventListener("click", function () {
-					alertify.success("Data berhasil ditambahkan!");
-				});
-		</script>
-		<!-- Datatable init js -->
-		<script src="assets/js/pages/datatables.init.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+		<script src="assets/js/app.js"></script>
 		<!-- Sweet Alerts js -->
         <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
         <!-- Sweet alert init js-->
