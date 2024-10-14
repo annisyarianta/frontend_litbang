@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Data Pengguna | Rumah Inovasi</title>
+		<title>Edit Pengguna | Rumah Inovasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
-		<!-- Sweet Alert-->
-        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+        <!-- dropzone css -->
+        <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
@@ -235,25 +235,23 @@
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
 									<h3 class="mb-sm-0">
-										Data Admin
+										Edit Pegawai
 									</h3>
 
 									<div class="page-title-right">
 										<ol class="breadcrumb m-0">
 											<li class="breadcrumb-item">
 												<a href="javascript: void(0);"
-													>Pengguna</a
-												>
-											</li>
-											<li class="breadcrumb-item">
-												<a href="#"
 													>Data Pengguna</a
 												>
 											</li>
-											<li class="breadcrumb-item active">
-												<a href="data-admin.html"
-													>Admin</a
+											<li class="breadcrumb-item">
+												<a href="data-pegawai.html"
+													>Pegawai</a
 												>
+											</li>
+											<li class="breadcrumb-item active">
+												Edit Pegawai
 											</li>
 										</ol>
 									</div>
@@ -264,99 +262,65 @@
 						<div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header d-flex justify-content-end">
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light" onclick="window.location.href='tambah-admin.html'"><i class="bx bx-plus label-icon"></i>Tambah Data</button>
-                                    </div>
                                     <div class="card-body">
-                                        <table id="datatable" class="table table-bordered dt-responsive w-100 table-hover">
-                                            <thead>
-												<tr>
-													<th class="text-center" style="width: 100px">Nama Admin</th>
-													<th class="text-center" style="width: 200px">OPD</th>
-													<th class="text-center" style="width: 100px">NIP</th>
-													<th class="text-center" style="width: 100px">No. Telepon</th>
-													<th class="text-center" style="width: 80px">Email</th>
-                                                    <th class="text-center" style="width: 70px">Aksi</th>
-												</tr>
-                                            </thead>
-                                            <tbody>
-												<tr>
-													<td class="text-center">Admin 1</td>
-													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
-													<td class="text-center">1932xxxxxxxxxxxx</td>
-													<td class="text-center">0721xxxxxxxx</td>
-													<td class="text-center">kominfo@pesawarankab.go.id</td>
-                                                    <td class="text-center">
-                                                        <a href="edit-admin.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-												</tr>
-												<tr>
-													<td class="text-center">Admin 2</td>
-													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
-													<td class="text-center">1932xxxxxxxxxxxx</td>
-													<td class="text-center">0721xxxxxxxx</td>
-													<td class="text-center">kominfo@pesawarankab.go.id</td>
-                                                    <td class="text-center">
-                                                        <a href="edit-admin.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-												</tr>
-												<tr>
-													<td class="text-center">Admin 3</td>
-													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
-													<td class="text-center">1932xxxxxxxxxxxx</td>
-													<td class="text-center">0721xxxxxxxx</td>
-													<td class="text-center">kominfo@pesawarankab.go.id</td>
-                                                    <td class="text-center">
-                                                        <a href="edit-admin.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-												</tr>
-												<tr>
-													<td class="text-center">Admin 4</td>
-													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
-													<td class="text-center">1932xxxxxxxxxxxx</td>
-													<td class="text-center">0721xxxxxxxx</td>
-													<td class="text-center">kominfo@pesawarankab.go.id</td>
-                                                    <td class="text-center">
-                                                        <a href="edit-admin.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-												</tr>
-												<tr>
-													<td class="text-center">Admin 5</td>
-													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
-													<td class="text-center">1932xxxxxxxxxxxx</td>
-													<td class="text-center">0721xxxxxxxx</td>
-													<td class="text-center">kominfo@pesawarankab.go.id</td>
-                                                    <td class="text-center">
-                                                        <a href="edit-admin.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-												</tr>
-                                            </tbody>
-                                        </table>
+                                        <form action="data-pegawai.html">
+                                            <div class="row mb-3">
+                                                <label for="nama-pegawai-input" class="col-sm-3 col-form-label">Nama Pegawai</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="nama-pegawai-input" placeholder="Masukkan nama pegawai" value="Kepala 1">
+                                                </div>
+                                            </div>
+											<div class="row mb-3">
+                                                <label for="opd-input" class="col-sm-3 col-form-label">OPD</label>
+                                                <div class="col-sm-9">
+                                                    <select
+                                                    class="form-select" id="opd-input">
+                                                        <option>
+                                                            Pilih OPD
+                                                        </option>
+                                                        <option>
+                                                            Diskominfotiksan Pesawaran
+                                                        </option>
+                                                        <option>
+                                                            Balitbang Pesawaran
+                                                        </option>
+                                                </select>
+                                                </div>
+                                            </div>
+											<div class="row mb-3">
+                                                <label for="nip-pgw-input" class="col-sm-3 col-form-label">NIP</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="nip-pgw-input" placeholder="Masukkan NIP" value="1932xxxxxxxxxxxx">
+                                                </div>
+                                            </div>
+											<div class="row mb-3">
+                                                <label for="jbtn-pgw-input" class="col-sm-3 col-form-label">Jabatan</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="jbtn-pgw-input" placeholder="Masukkan jabatan" value="Kepala OPD">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="telp-pgw-input" class="col-sm-3 col-form-label">No. Telepon</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="telp-pgw-input" placeholder="Masukkan no. telp" value="0721xxxxxxxx">
+                                                </div>
+                                            </div>
+											<div class="row mb-5">
+                                                <label for="email-pgw-input" class="col-sm-3 col-form-label">Email</label>
+                                                <div class="col-sm-9">
+                                                    <input type="email" class="form-control" id="email-pgw-input" placeholder="Masukkan email" value="kominfo@pesawarankab.go.id">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="d-flex justify-content-end">
+                                                        <button type="button" class="btn btn-secondary w-md" onclick="window.location.href='data-pegawai.html'">Batal</button>
+                                                        <button type="submit" class="btn btn-warning w-md ms-4">Perbarui</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -522,42 +486,10 @@
 		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
 		<!-- dashboard init -->
 		<script src="assets/js/pages/dashboard.init.js"></script>
-		<!-- Required datatable js -->
-        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-		<!-- Responsive examples -->
-        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-        <!-- Datatable init js -->
-        <script src="assets/js/pages/datatables.init.js"></script>
 		<!-- Buttons examples -->
         <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <!-- dropzone js -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 		<script src="assets/js/app.js"></script>
-		<!-- Sweet Alerts js -->
-        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
-        <!-- Sweet alert init js-->
-		<script>
-			document
-		.getElementById("sa-warning")
-		.addEventListener("click", function () {
-			Swal.fire({
-				title: "Konfirmasi hapus data?",
-				text: "",
-				icon: "warning",
-				showCancelButton: !0,
-				confirmButtonColor: "#2ab57d",
-				cancelButtonColor: "#fd625e",
-				confirmButtonText: "Hapus",
-				cancelButtonText: "Batal",
-			}).then(function (e) {
-				e.value &&
-					Swal.fire(
-						"Terhapus!",
-						"Data telah dihapus",
-						"success",
-					);
-			});
-		});
-		</script>
 	</body>
 </html>
