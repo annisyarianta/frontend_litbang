@@ -293,7 +293,8 @@
                                                         <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Tolak"id="sa-params">
                                                             <i class="fas fa-times"></i>
                                                         </a>
-														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
+														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75" data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable">Detail</a>
                                                     </td>
 												</tr>
 												<tr>
@@ -504,7 +505,53 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Right-bar -->
+
+		<!-- Modal Detail -->
+		<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="exampleModalScrollableTitle">Detail Proposal</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body card-body">
+						<div class="table-responsive">
+							<table class="table table-striped mb-0">
+								<!-- <thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+									</tr>
+								</thead> -->
+								<tbody>
+									<tr>
+										<th scope="row" style="width: 230px">Judul Inovasi</th>
+										<td>Aplikasi Pelayanan Cuti ASN (SiPeCut)</td>
+									</tr>
+									<tr>
+										<th scope="row">Deskripsi</th>
+										<td>Sipecut ASN adalah aplikasi pelayanan usul cuti Aparatur Sipil Negara sebagai pembaharuan dari aplikasi sebelumnya, aplikasi ecuti. Dengan adanya SI PECUT ASN juga cuti di lingkungan pemerintah provinsi kalimantan timur terdata secara akurat dan rapi. Sepanjang tahun 2022 misalnya terdapat 783 usulan cuti yang masuk kedalam aplikasi SI PECUT ASN. Jika tanpa aplikasi data jumlah pemohon seperti ini sulit untuk didapatkan karena pengumpulan berkas dilakukan secara manual. Setelah adanya SI PECUT ASN hal - hal tersebut bukan menjadi masalah. Permohonan cuti dapat dilakukan dimana dan kapan saja secara online, dan tidak membutuhkan waktu lama untuk cuti di proses (hanya 1 hari kerja). Dengan adanya SI PECUT ASN juga cuti di lingkungan pemerintah provinsi kalimantan timur terdata secara akurat dan rapi. Sepanjang tahun 2022 misalnya terdapat 783 usulan cuti yang masuk kedalam aplikasi SI PECUT ASN. Jika tanpa aplikasi data jumlah pemohon seperti ini sulit untuk didapatkan karena pengumpulan berkas dilakukan secara manual.</td>
+									</tr>
+									<tr>
+										<th scope="row">Kategori</th>
+										<td>Riset</td>
+									</tr>
+									<tr>
+										<th scope="row">Tanggal Pengajuan</th>
+										<td>2012/03/29</td>
+									</tr>
+									<tr>
+										<th scope="row">Status</th>
+										<td><span class="badge bg-secondary rounded-pill">Tertunda</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- JAVASCRIPT -->
 		<script src="assets/libs/jquery/jquery.min.js"></script>
