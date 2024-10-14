@@ -550,15 +550,15 @@
 					icon: "warning",
 					showCancelButton: !0,
 					confirmButtonText: "Ya, tolak!",
-					cancelButtonText: "Cancel",
+					cancelButtonText: "Batal",
 					confirmButtonClass: "btn btn-primary mt-2",
 					cancelButtonClass: "btn btn-secondary ms-2 mt-2",
 					buttonsStyling: !1,
 				}).then(function (e) {
 					e.value &&
 					Swal.fire(
-						"Rejected!",
-						"Proposal ditolak.",
+						"Ditolak!",
+						"Proposal tersebut telah ditolak.",
 						"error",
 					);
 				});

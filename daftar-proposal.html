@@ -528,18 +528,19 @@
 		.getElementById("sa-warning")
 		.addEventListener("click", function () {
 			Swal.fire({
-				title: "Are you sure?",
-				text: "You won't be able to revert this!",
+				title: "Konfirmasi hapus?",
+				text: "",
 				icon: "warning",
 				showCancelButton: !0,
 				confirmButtonColor: "#2ab57d",
 				cancelButtonColor: "#fd625e",
-				confirmButtonText: "Yes, delete it!",
+				confirmButtonText: "Hapus",
+				cancelButtonText: "Batal",
 			}).then(function (e) {
 				e.value &&
 					Swal.fire(
-						"Deleted!",
-						"Your file has been deleted.",
+						"Terhapus!",
+						"Data telah dihapus",
 						"success",
 					);
 			});
