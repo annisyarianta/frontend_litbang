@@ -160,7 +160,7 @@
 							</li>
 
 							<li>
-								<a href="#">
+								<a href="data-opd.html">
 									<i data-feather="user-check"></i>
 									<span>Data OPD</span>
 								</a>
@@ -174,11 +174,11 @@
 									>
 								</a>
 								<ul class="sub-menu" aria-expanded="true">
-                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="data-admin.html">Admin</a></li>
                                     <li>
-                                        <a href="#">Pegawai</a>
+                                        <a href="data-pegawai.html">Pegawai</a>
                                     </li>
-									<li><a href="#">Umum</a></li>
+									<li><a href="data-pengguna-umum.html">Umum</a></li>
                                 </ul>
 							</li>
 
@@ -187,7 +187,7 @@
 							</li>
 
 							<li>
-								<a href="#">
+								<a href="kelola-berita.html">
 									<i data-feather="layout"></i>
 									<span
 										>Kelola Berita</span
@@ -196,7 +196,7 @@
 							</li>
 
 							<li>
-								<a href="#">
+								<a href="kelola-galeri.html">
 									<i data-feather="grid"></i>
 									<span
 										>Kelola Galeri</span
@@ -209,10 +209,10 @@
 							</li>
 
 							<li>
-								<a href="#">
+								<a href="pengaturan-web.html">
 									<i data-feather="settings"></i>
 									<span
-										>Option Web</span
+										>Pengaturan Website</span
 									>
 								</a>
 							</li>
@@ -235,23 +235,20 @@
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
 									<h3 class="mb-sm-0">
-										Daftar Proposal
+										Data OPD
 									</h3>
 
 									<div class="page-title-right">
 										<ol class="breadcrumb m-0">
 											<li class="breadcrumb-item">
 												<a href="javascript: void(0);"
-													>Inovasi</a
-												>
-											</li>
-											<li class="breadcrumb-item">
-												<a href="#"
-													>Data Inovasi</a
+													>Pengguna</a
 												>
 											</li>
 											<li class="breadcrumb-item active">
-												Daftar Proposal
+												<a href="data-opd.html"
+													>Data OPD</a
+												>
 											</li>
 										</ol>
 									</div>
@@ -263,83 +260,94 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header d-flex justify-content-end">
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light" onclick="window.location.href='tambah-proposal.html'"><i class="bx bx-plus label-icon"></i>Tambah Data</button>
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light" onclick="window.location.href='tambah-opd.html'"><i class="bx bx-plus label-icon"></i>Tambah Data</button>
                                     </div>
                                     <div class="card-body">
                                         <table id="datatable" class="table table-bordered dt-responsive w-100 table-hover">
                                             <thead>
 												<tr>
-													<th class="text-center" style="width: 220px">Judul Inovasi</th>
-													<th class="text-center" style="width: 250px">Deskripsi</th>
-													<th class="text-center" style="width: 120px">Kategori</th>
-													<th class="text-center" style="width: 120px">Tanggal Pengajuan</th>
-													<th class="text-center" style="width: 70px">Status</th>
-                                                    <th class="text-center" style="width: 100px">Aksi</th>
+													<th class="text-center" style="width: 50px">ID</th>
+													<th class="text-center" style="width: 200px">Nama OPD</th>
+													<th class="text-center" style="width: 200px">Alamat</th>
+													<th class="text-center" style="width: 120px">No. Telepon</th>
+													<th class="text-center" style="width: 100px">Email</th>
+                                                    <th class="text-center" style="width: 70px">Aksi</th>
 												</tr>
                                             </thead>
                                             <tbody>
 												<tr>
-													<td>Aksi Konsumen Cerdas Ayo Mengadu (SI KOMENG)</td>
-													<td>Aksi Konsumen Cerdas Ayo mengadu (SI KOMENG) merupakan Sistem Informasi...</td>
-													<td class="text-center">Inovasi</td>
-													<td class="text-center">2008/11/28</td>
-													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+													<td class="text-center">1</td>
+													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
+													<td>Jl. Raya Kedondong, Way Layap Kec. Gedong Tataan Kabupaten Pesawaran, Provinsi Lampung</td>
+													<td class="text-center">0721xxxxxxxx</td>
+													<td class="text-center">kominfo@pesawarankab.go.id</td>
                                                     <td class="text-center">
-                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                        <a href="edit-opd.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
                                                             <i class="fas fa-pencil-alt"></i>
                                                         </a>
                                                         <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
                                                             <i class="fas fa-trash-alt"></i>
                                                         </a>
-														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
                                                     </td>
 												</tr>
 												<tr>
-													<td>Aplikasi JDIH Kaltim Berbasis Android</td>
-													<td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit laboriosam...</td>
-													<td class="text-center">Riset</td>
-													<td class="text-center">2012/03/29</td>
-													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+													<td class="text-center">2</td>
+													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
+													<td>Jl. Raya Kedondong, Way Layap Kec. Gedong Tataan Kabupaten Pesawaran, Provinsi Lampung</td>
+													<td class="text-center">0721xxxxxxxx</td>
+													<td class="text-center">kominfo@pesawarankab.go.id</td>
                                                     <td class="text-center">
-                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                        <a href="edit-opd.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
                                                             <i class="fas fa-pencil-alt"></i>
                                                         </a>
                                                         <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
                                                             <i class="fas fa-trash-alt"></i>
                                                         </a>
-														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
                                                     </td>
 												</tr>
 												<tr>
-													<td>Aplikasi Simata Laut Kaltim (Sistem Informasi Tata Ruang Laut Kaltim)</td>
-													<td>Aplikasi yang dapat digunakan oleh masyarakat umum untuk memberikan akses...</td>
-													<td class="text-center">Inovasi</td>
-													<td class="text-center">2012/12/02</td>
-													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+													<td class="text-center">3</td>
+													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
+													<td>Jl. Raya Kedondong, Way Layap Kec. Gedong Tataan Kabupaten Pesawaran, Provinsi Lampung</td>
+													<td class="text-center">0721xxxxxxxx</td>
+													<td class="text-center">kominfo@pesawarankab.go.id</td>
                                                     <td class="text-center">
-                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                        <a href="edit-opd.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
                                                             <i class="fas fa-pencil-alt"></i>
                                                         </a>
                                                         <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
                                                             <i class="fas fa-trash-alt"></i>
                                                         </a>
-														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
                                                     </td>
 												</tr>
 												<tr>
-													<td>CAP JEMPOL (lanCAr Posyandu dengan menJEMput Pakai Ojek Lansia)</td>
-													<td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit laboriosam...</td>
-													<td class="text-center">Riset</td>
-													<td class="text-center">2012/03/29</td>
-													<td class="text-center"><span class="badge bg-success rounded-pill">Disetujui</span></td>
+													<td class="text-center">4</td>
+													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
+													<td>Jl. Raya Kedondong, Way Layap Kec. Gedong Tataan Kabupaten Pesawaran, Provinsi Lampung</td>
+													<td class="text-center">0721xxxxxxxx</td>
+													<td class="text-center">kominfo@pesawarankab.go.id</td>
                                                     <td class="text-center">
-                                                        <a href="daftar-proposal-edit.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                        <a href="edit-opd.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
                                                             <i class="fas fa-pencil-alt"></i>
                                                         </a>
                                                         <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
                                                             <i class="fas fa-trash-alt"></i>
                                                         </a>
-														<a class="btn btn-soft-secondary btn-sm waves-effect waves-light w-75">Detail</a>
+                                                    </td>
+												</tr>
+												<tr>
+													<td class="text-center">5</td>
+													<td>Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Pesawaran</td>
+													<td>Jl. Raya Kedondong, Way Layap Kec. Gedong Tataan Kabupaten Pesawaran, Provinsi Lampung</td>
+													<td class="text-center">0721xxxxxxxx</td>
+													<td class="text-center">kominfo@pesawarankab.go.id</td>
+                                                    <td class="text-center">
+                                                        <a href="edit-opd.html" class="btn btn-outline-warning btn-sm edit mb-3" title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a class="btn btn-outline-danger btn-sm delete ms-2 mb-3" title="Delete" id="sa-warning">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
                                                     </td>
 												</tr>
                                             </tbody>
