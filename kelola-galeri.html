@@ -31,6 +31,20 @@
 			id="app-style"
 			rel="stylesheet"
 			type="text/css" />
+		
+		<style>
+			.card-img-overlay {
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+				background-color: rgba(0, 0, 0, 0.5); 
+			}
+			.card-img:hover {
+				filter: brightness(75%);
+			}
+			.card-img-overlay:hover {
+				opacity: 1;
+			}
+		</style>												
 	</head>
 
 	<body>
@@ -259,13 +273,13 @@
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
-                                                <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#gambar" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
                                                     <span class="d-none d-sm-block">Gambar</span>    
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#video" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
                                                     <span class="d-none d-sm-block">Video</span>    
                                                 </a>
@@ -274,7 +288,7 @@
         
                                         <!-- Tab panes -->
                                         <div class="tab-content p-3 text-muted">
-                                            <div class="tab-pane active" id="home" role="tabpanel">
+                                            <div class="tab-pane active" id="gambar" role="tabpanel">
                                                 <div class="row align-items-center">
 													<div class="col-md-6">
 													</div>
@@ -289,12 +303,126 @@
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="card">
-															<img class="card-img img-fluid" src="assets/images/small/img-6.jpg" alt="Card image">
+															<img class="card-img img-fluid" src="assets/images/small/img-1.jpg" alt="Card image">
 															<div class="card-img-overlay">
-																<h4 class="card-title text-white">Card title</h4>
-																<p class="card-text">
-																	<small class="text-white">Last updated 3 mins ago</small>
-																</p>
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="card">
+															<img class="card-img img-fluid" src="assets/images/small/img-2.jpg" alt="Card image">
+															<div class="card-img-overlay">
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="card">
+															<img class="card-img img-fluid" src="assets/images/small/img-3.jpg" alt="Card image">
+															<div class="card-img-overlay">
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="card">
+															<img class="card-img img-fluid" src="assets/images/small/img-4.jpg" alt="Card image">
+															<div class="card-img-overlay">
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="card">
+															<img class="card-img img-fluid" src="assets/images/small/img-5.jpg" alt="Card image">
+															<div class="card-img-overlay">
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -302,69 +430,374 @@
 														<div class="card">
 															<img class="card-img img-fluid" src="assets/images/small/img-6.jpg" alt="Card image">
 															<div class="card-img-overlay">
-																<h4 class="card-title text-white">Card title</h4>
-																<p class="card-text">
-																	<small class="text-white">Last updated 3 mins ago</small>
-																</p>
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
 													<div class="col-lg-4">
 														<div class="card">
-															<img class="card-img img-fluid" src="assets/images/small/img-6.jpg" alt="Card image">
+															<img class="card-img img-fluid" src="assets/images/small/img-7.jpg" alt="Card image">
 															<div class="card-img-overlay">
-																<h4 class="card-title text-white">Card title</h4>
-																<p class="card-text">
-																	<small class="text-white">Last updated 3 mins ago</small>
-																</p>
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
 													<div class="col-lg-4">
 														<div class="card">
-															<img class="card-img img-fluid" src="assets/images/small/img-6.jpg" alt="Card image">
+															<img class="card-img img-fluid" src="assets/images/small/img-1.jpg" alt="Card image">
 															<div class="card-img-overlay">
-																<h4 class="card-title text-white">Card title</h4>
-																<p class="card-text">
-																	<small class="text-white">Last updated 3 mins ago</small>
-																</p>
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
 													<div class="col-lg-4">
 														<div class="card">
-															<img class="card-img img-fluid" src="assets/images/small/img-6.jpg" alt="Card image">
+															<img class="card-img img-fluid" src="assets/images/small/img-2.jpg" alt="Card image">
 															<div class="card-img-overlay">
-																<h4 class="card-title text-white">Card title</h4>
-																<p class="card-text">
-																	<small class="text-white">Last updated 3 mins ago</small>
-																</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-4">
-														<div class="card">
-															<img class="card-img img-fluid" src="assets/images/small/img-6.jpg" alt="Card image">
-															<div class="card-img-overlay">
-																<h4 class="card-title text-white">Card title</h4>
-																<p class="card-text">
-																	<small class="text-white">Last updated 3 mins ago</small>
-																</p>
+																<div class="row">
+																	<div class="col-9">
+																		<h4 class="card-title text-white">Card title Card title Card title Card title Card title Card title Card title Card title</h4>
+																	</div>
+																	<div class="col-3 d-flex justify-content-end align-items-start">
+																		<a href="edit-gambar.html" class="btn btn-warning btn-rounded btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-danger btn-rounded btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<p class="card-text">
+																		<small class="text-white">Terakhir diperbarui 3 menit yang lalu</small>
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
+												<div class="row justify-content-center mt-2">
+													<div class="col-md-3">
+														<div class="">
+															<ul class="pagination mb-sm-0">
+																<li class="page-item disabled">
+																	<a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+																</li>
+																<li class="page-item active">
+																	<a href="#" class="page-link">1</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">2</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">3</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">4</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">5</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
                                             </div>
-                                            <div class="tab-pane" id="profile" role="tabpanel">
-                                                <p class="mb-0">
-                                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                                    single-origin coffee squid. Exercitation +1 labore velit, blog
-                                                    sartorial PBR leggings next level wes anderson artisan four loko
-                                                    farm-to-table craft beer twee. Qui photo booth letterpress,
-                                                    commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                                    vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                                    aesthetic magna delectus.
-                                                </p>
+                                            <div class="tab-pane" id="video" role="tabpanel">
+                                                <div class="row align-items-center">
+													<div class="col-md-6">
+													</div>
+													<div class="col-md-6">
+														<div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
+															<div>
+																<a href="tambah-galeri-video.html" class="btn btn-primary waves-effect btn-label waves-light"><i class="bx bx-plus label-icon"></i>Tambah Video</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-4 col-sm-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+															<div class="card-body">
+																<p class="text-muted mb-2">Terakhir diperbarui 10 menit yang lalu</p>
+																<h4 class="text-body">Judul Judul Judul Judul Judul Judul Judul Judul Judul</h4>
+																<div class="row mt-3">
+																	<div class="col-12 d-flex justify-content-end">
+																		<a href="edit-video.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+																			<i class="fas fa-pencil-alt"></i>
+																		</a>
+																		<a class="btn btn-outline-danger btn-sm delete ms-2" title="Delete" id="sa-warning">
+																			<i class="fas fa-trash-alt"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- <div class="row">
+													<div class="col-lg-6">
+														<div class="card">
+															<div class="ratio ratio-16x9">
+																<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
+															</div>
+														</div>
+													</div>
+												</div> -->
+												<div class="row justify-content-center mt-2">
+													<div class="col-md-3">
+														<div class="">
+															<ul class="pagination mb-sm-0">
+																<li class="page-item disabled">
+																	<a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+																</li>
+																<li class="page-item active">
+																	<a href="#" class="page-link">1</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">2</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">3</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">4</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link">5</a>
+																</li>
+																<li class="page-item">
+																	<a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
                                             </div>
                                         </div>
                                     </div>
