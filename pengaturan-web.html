@@ -8,6 +8,8 @@
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
 		<!-- Sweet Alert-->
         <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+		<!-- dropzone css -->
+        <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
@@ -262,7 +264,7 @@
                                     <div class="card-body">
 										<div class="table-responsive">
 											<table class="table align-middle mb-0 table-hover">
-												<thead class="table-light">
+												<thead>
 													<tr>
 														<th style="width: 200px">Key</th>
 														<th>Value</th>
@@ -276,36 +278,40 @@
 															<img class="rounded me-2" alt="200x200" width="200" src="assets/images/small/img-4.jpg" data-holder-rendered="true">
 														</td>
 														<td class="text-center">
-															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm edit" title="Edit">
+															<button type="button" class="btn btn-outline-warning btn-sm edit" title="Edit" data-bs-toggle="modal"
+															data-bs-target="#staticBackdrop">
 																<i class="fas fa-pencil-alt"></i>
-															</a>
+															</button>
 														</td>
 													</tr>
 													<tr>
 														<th scope="row">Warna</th>
 														<td>#0077c2</td>
 														<td class="text-center">
-															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm" title="Edit">
+															<button type="button" class="btn btn-outline-warning btn-sm" title="Edit" data-bs-toggle="modal"
+															data-bs-target="#warnaModal">
 																<i class="fas fa-pencil-alt"></i>
-															</a>
+															</button>
 														</td>
 													</tr>
 													<tr>
 														<th scope="row">Nama</th>
 														<td>Rumah Inovasi</td>
 														<td class="text-center">
-															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm" title="Edit">
+															<button type="button" class="btn btn-outline-warning btn-sm" title="Edit" data-bs-toggle="modal"
+															data-bs-target="#namaModal">
 																<i class="fas fa-pencil-alt"></i>
-															</a>
+															</button>
 														</td>
 													</tr>
 													<tr>
 														<th scope="row">Regulasi</th>
 														<td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis officiis accusantium nobis, ducimus suscipit, ipsa sequi quibusdam quis aliquid impedit ex ab corporis rerum reiciendis repellat aut soluta dolor cum.</td>
 														<td class="text-center">
-															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm" title="Edit">
+															<button type="button" class="btn btn-outline-warning btn-sm" title="Edit" data-bs-toggle="modal"
+															data-bs-target="#regulasiModal">
 																<i class="fas fa-pencil-alt"></i>
-															</a>
+															</button>
 														</td>
 													</tr>
 													<tr>
@@ -314,7 +320,8 @@
 															<img class="rounded me-2" alt="200x200" width="200" src="assets/images/small/img-4.jpg" data-holder-rendered="true">
 														</td>
 														<td class="text-center">
-															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm" title="Edit">
+															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm" title="Edit" data-bs-toggle="modal"
+															data-bs-target="#bannerModal">
 																<i class="fas fa-pencil-alt"></i>
 															</a>
 														</td>
@@ -323,9 +330,10 @@
 														<th scope="row">Deskripsi</th>
 														<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod at nobis autem error illum aliquid voluptatibus. Laborum suscipit illo reiciendis. Voluptate maxime ipsum quos odit magni? Ex, aperiam magni.</td>
 														<td class="text-center">
-															<a href="edit-opd.html" class="btn btn-outline-warning btn-sm" title="Edit">
+															<button type="button" class="btn btn-outline-warning btn-sm" title="Edit" data-bs-toggle="modal"
+															data-bs-target="#deskripsiModal">
 																<i class="fas fa-pencil-alt"></i>
-															</a>
+															</button>
 														</td>
 													</tr>
 												</tbody>
@@ -480,7 +488,383 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Right-bar -->
+
+		<!-- Modal edit logo -->
+		<div
+			class="modal fade"
+			id="staticBackdrop"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-centered"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="staticBackdropLabel">
+							Edit Logo
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form
+							action="javascript: void(0);">
+							<div class="mb-3">
+								<label
+									for="setting-logo"
+									class="col-form-label"
+									>Upload Logo</label
+								>
+								<div class="dropzone" id="imageDropzone">
+									<div class="fallback">
+										<input name="file" type="file" multiple="multiple">
+									</div>
+									<div class="dz-message needsclick">
+										<div class="mb-3">
+											<i class="display-4 text-muted bx bx-cloud-upload"></i>
+										</div>
+										<h5>Drop files here or click to upload.</h5>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light"
+							data-bs-dismiss="modal">
+							Batal
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+							id="alert-success">
+							Kirim
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal edit warna -->
+		<div
+			class="modal fade"
+			id="warnaModal"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-centered"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="staticBackdropLabel">
+							Edit Warna
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form
+							action="javascript: void(0);">
+							<div class="mb-3">
+								<label
+									for="setting-warna"
+									class="col-form-label"
+									>Warna</label
+								>
+								<input
+								type="color"
+								class="form-control form-control-color mw-100"
+								id="setting-warna"
+								value="#5156be"
+								title="Choose your color" />							
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light"
+							data-bs-dismiss="modal">
+							Batal
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+							id="alert-success">
+							Kirim
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal edit nama -->
+		<div
+			class="modal fade"
+			id="namaModal"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-centered"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="staticBackdropLabel">
+							Edit Nama
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form
+							action="javascript: void(0);">
+							<div class="mb-3">
+								<label
+									for="setting-nama"
+									class="col-form-label"
+									>Nama Website</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="setting-nama"
+									required />
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light"
+							data-bs-dismiss="modal">
+							Batal
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+							id="alert-success">
+							Kirim
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal edit regulasi -->
+		<div
+			class="modal fade"
+			id="regulasiModal"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-centered"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="staticBackdropLabel">
+							Edit Regulasi
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form
+							action="javascript: void(0);">
+							<div class="mb-3">
+								<label
+									for="setting-regulasi"
+									class="col-form-label"
+									>Regulasi</label
+								>
+								<textarea class="form-control" id="setting-regulasi" rows="4"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light"
+							data-bs-dismiss="modal">
+							Batal
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+							id="alert-success">
+							Kirim
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal edit banner -->
+		<div
+			class="modal fade"
+			id="bannerModal"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-centered"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="staticBackdropLabel">
+							Edit Banner
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form
+							action="javascript: void(0);">
+							<div class="mb-3">
+								<label
+									for="setting-banner"
+									class="col-form-label"
+									>Upload Banner</label
+								>
+								<div class="dropzone" id="bannerDropzone">
+									<div class="fallback">
+										<input name="file" type="file" multiple="multiple">
+									</div>
+									<div class="dz-message needsclick">
+										<div class="mb-3">
+											<i class="display-4 text-muted bx bx-cloud-upload"></i>
+										</div>
+										<h5>Drop files here or click to upload.</h5>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light"
+							data-bs-dismiss="modal">
+							Batal
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+							id="alert-success">
+							Kirim
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal edit deskripsi -->
+		<div
+			class="modal fade"
+			id="deskripsiModal"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-centered"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="staticBackdropLabel">
+							Edit Deskripsi
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form
+							action="javascript: void(0);">
+							<div class="mb-3">
+								<label
+									for="setting-deskripsi"
+									class="col-form-label"
+									>Deskripsi</label
+								>
+								<textarea class="form-control" id="setting-deskripsi" rows="4"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light"
+							data-bs-dismiss="modal">
+							Batal
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+							id="alert-success">
+							Kirim
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- JAVASCRIPT -->
 		<script src="assets/libs/jquery/jquery.min.js"></script>
@@ -494,8 +878,6 @@
 		<!-- Plugins js-->
 		<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
 		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-		<!-- dashboard init -->
-		<script src="assets/js/pages/dashboard.init.js"></script>
 		<!-- Required datatable js -->
         <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -533,5 +915,7 @@
 			});
 		});
 		</script>
+		<!-- dropzone js -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 	</body>
 </html>
