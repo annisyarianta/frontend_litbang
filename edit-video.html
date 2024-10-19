@@ -2,24 +2,15 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Tambah Proposal | Rumah Inovasi</title>
+		<title>Edit Video | Rumah Inovasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
-        <!-- dropzone css -->
-        <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
 			rel="stylesheet"
 			type="text/css" />
-
-		<!-- DataTables -->
-		<link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-		<link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
-		<!-- Responsive datatable examples -->
-		<link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
 
 		<!-- Bootstrap Css -->
 		<link
@@ -235,23 +226,23 @@
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
 									<h3 class="mb-sm-0">
-										Tambah Proposal
+										Edit Video
 									</h3>
 
 									<div class="page-title-right">
 										<ol class="breadcrumb m-0">
 											<li class="breadcrumb-item">
 												<a href="javascript: void(0);"
-													>Data Inovasi</a
+													>Kelola Konten</a
 												>
 											</li>
 											<li class="breadcrumb-item">
-												<a href="daftar-proposal.html"
-													>Daftar Proposal</a
+												<a href="kelola-galeri.html"
+													>Kelola Galeri</a
 												>
 											</li>
 											<li class="breadcrumb-item active">
-												Tambah Proposal
+												Edit Video
 											</li>
 										</ol>
 									</div>
@@ -263,56 +254,24 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="daftar-proposal.html">
+                                        <form action="kelola-galeri.html">
                                             <div class="row mb-3">
-                                                <label for="judul-inovasi-input" class="col-sm-3 col-form-label">Judul Inovasi</label>
+                                                <label for="judul-video-input" class="col-sm-3 col-form-label">Judul Video</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="judul-inovasi-input" placeholder="Masukkan judul proposal inovasi">
+                                                    <input type="text" class="form-control" id="judul-video-input" placeholder="Masukkan judul video" value="Judul Judul Judul Judul Judul Judul Judul Judul Judul">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label for="deskripsi-inovasi-input" class="col-sm-3 col-form-label">Deskripsi</label>
-                                                <div class="col-sm-9">
-                                                    <textarea class="form-control" id="deskripsi-inovasi-input" rows="4" placeholder="Masukkan deskripsi inovasi"></textarea>
-                                                </div>
+											<div class="row mb-5">
+                                                <label for="link-video-input" class="col-sm-3 col-form-label">Tautan Video</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="link-video-input" placeholder="Masukkan link video" value="https://www.youtube.com/embed/1y_kfWUCFDQ">
+												</div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label for="kategori-inovasi-input" class="col-sm-3 col-form-label">Kategori</label>
-                                                <div class="col-sm-9">
-                                                    <select
-                                                    class="form-select" id="kategori-inovasi-input">
-                                                        <option>
-                                                            Select
-                                                        </option>
-                                                        <option>
-                                                            Option A
-                                                        </option>
-                                                        <option>
-                                                            Option B
-                                                        </option>
-                                                </select>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label for="date-input" class="col-sm-3 col-form-label">Tanggal Pengajuan</label>
-                                                <div class="col-sm-9">
-                                                    <input class="form-control" type="date" value="" id="date-input" />
-                                                </div>
-                                            </div>
-                                            <div class="row mb-4">
-                                                <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Upload File Proposal</label>
-                                                <div class="col-sm-9">
-                                                    <div class="fallback">
-                                                        <input name="file" type="file" multiple="multiple">
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-end">
-                                                        <button type="button" class="btn btn-secondary w-md" onclick="window.location.href='daftar-proposal.html'">Batal</button>
-                                                        <button type="submit" class="btn btn-primary w-md ms-4">Kirim</button>
+                                                        <button type="button" class="btn btn-secondary w-md" onclick="window.location.href='kelola-galeri.html'">Batal</button>
+                                                        <button type="submit" class="btn btn-warning w-md ms-4">Perbarui</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -480,12 +439,9 @@
 		<!-- Plugins js-->
 		<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
 		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-		<!-- dashboard init -->
-		<script src="assets/js/pages/dashboard.init.js"></script>
 		<!-- Buttons examples -->
         <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-        <!-- dropzone js -->
-        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
-		<script src="assets/js/app.js"></script>
+        <!-- init js -->
+        <script src="assets/js/pages/form-editor.init.js"></script>
 	</body>
 </html>
