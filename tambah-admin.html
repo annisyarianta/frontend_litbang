@@ -96,14 +96,14 @@
 									class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
 							</button>
 							<div class="dropdown-menu dropdown-menu-end">
-								<!-- <a
+								<a
 									class="dropdown-item"
 									href="#"
 									><i
 										class="mdi mdi mdi-face-man font-size-16 align-middle me-1"></i>
-									Profile</a
+									Profil</a
 								>
-								<div class="dropdown-divider"></div> -->
+								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="login.html"
 									><i
 										class="mdi mdi-logout font-size-16 align-middle me-1"></i>
@@ -265,7 +265,7 @@
                                     <div class="card-body">
                                         <form action="data-admin.html">
                                             <div class="row mb-3">
-                                                <label for="nama-admin-input" class="col-sm-3 col-form-label">Nama Admin</label>
+                                                <label for="nama-admin-input" class="col-sm-3 col-form-label">Nama Lengkap</label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" id="nama-admin-input" placeholder="Masukkan nama admin">
                                                 </div>
@@ -275,7 +275,7 @@
                                                 <div class="col-sm-9">
                                                     <select
                                                     class="form-select" id="opd-input">
-                                                        <option>
+                                                        <option value="" disabled selected>
                                                             Pilih OPD
                                                         </option>
                                                         <option>
@@ -485,5 +485,7 @@
         <!-- dropzone js -->
         <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 		<script src="assets/js/app.js"></script>
+		<!-- password addon init -->
+		<script src="assets/js/pages/pass-addon.init.js"></script>
 	</body>
 </html>
