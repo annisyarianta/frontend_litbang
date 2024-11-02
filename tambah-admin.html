@@ -6,8 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
-        <!-- dropzone css -->
-        <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
@@ -267,7 +265,7 @@
                                             <div class="row mb-3">
                                                 <label for="nama-admin-input" class="col-sm-3 col-form-label">Nama Lengkap</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="nama-admin-input" placeholder="Masukkan nama admin">
+                                                    <input type="text" class="form-control" id="nama-admin-input" placeholder="Masukkan Nama Lengkap">
                                                 </div>
                                             </div>
 											<div class="row mb-3">
@@ -293,18 +291,83 @@
                                                     <input type="text" class="form-control" id="nip-adm-input" placeholder="Masukkan NIP">
                                                 </div>
                                             </div>
+											<div class="row mb-3">
+                                                <label for="role-input" class="col-sm-3 col-form-label">Role</label>
+                                                <div class="col-sm-9">
+                                                    <select
+                                                    class="form-select" id="role-input">
+                                                        <option>
+                                                            Admin OPD
+                                                        </option>
+                                                </select>
+                                                </div>
+                                            </div>
                                             <div class="row mb-3">
                                                 <label for="telp-adm-input" class="col-sm-3 col-form-label">No. Telepon</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="telp-adm-input" placeholder="Masukkan no. telp">
+                                                    <input type="text" class="form-control" id="telp-adm-input" placeholder="Masukkan no. telepon">
                                                 </div>
                                             </div>
-											<div class="row mb-5">
+											<div class="row mb-3">
                                                 <label for="email-adm-input" class="col-sm-3 col-form-label">Email</label>
                                                 <div class="col-sm-9">
                                                     <input type="email" class="form-control" id="email-adm-input" placeholder="Masukkan email">
                                                 </div>
                                             </div>
+											<div class="row mb-3">
+												<label for="userpassword" class="col-sm-3 col-form-label"
+													>Password</label
+												>
+												<div class="col-sm-9">
+													<div class="input-group auth-pass-inputgroup">
+														<input
+															type="password"
+															class="form-control"
+															id="userpassword"
+															placeholder="Masukkan kata sandi"
+															aria-label="Password"
+															aria-describedby="password-addon"
+															required />
+														<button
+															class="btn btn-light shadow-none ms-0"
+															type="button"
+															id="password-addon">
+															<i class="mdi mdi-eye-outline"></i>
+														</button>
+														<div
+															class="invalid-feedback"
+															id="password-error">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row mb-5">
+												<label for="repassword" class="col-sm-3 col-form-label"
+													>Konfirmasi Password</label
+												>
+												<div class="col-sm-9">
+													<div class="input-group auth-pass-inputgroup">
+														<input
+															type="password"
+															class="form-control"
+															id="repassword"
+															placeholder="Masukkan kembali kata sandi"
+															aria-label="Re-Password"
+															aria-describedby="repassword-addon"
+															required />
+														<button
+															class="btn btn-light shadow-none ms-0"
+															type="button"
+															id="repassword-addon">
+															<i class="mdi mdi-eye-outline"></i>
+														</button>
+														<div
+															class="invalid-feedback"
+															id="repassword-error">
+														</div>
+													</div>
+												</div>
+											</div>
 
                                             <div class="row">
                                                 <div class="col-12">
@@ -482,8 +545,6 @@
 		<script src="assets/js/pages/dashboard.init.js"></script>
 		<!-- Buttons examples -->
         <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-        <!-- dropzone js -->
-        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 		<script src="assets/js/app.js"></script>
 		<!-- password addon init -->
 		<script src="assets/js/pages/pass-addon.init.js"></script>

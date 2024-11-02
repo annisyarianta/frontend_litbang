@@ -7,7 +7,10 @@
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
 		<!-- Sweet Alert-->
-        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+		<link
+			href="assets/libs/sweetalert2/sweetalert2.min.css"
+			rel="stylesheet"
+			type="text/css" />
 		<!-- plugin css -->
 		<link
 			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
@@ -31,6 +34,19 @@
 			id="app-style"
 			rel="stylesheet"
 			type="text/css" />
+		<style>
+			.img-thumbnail {
+				aspect-ratio: 3 / 2;
+				width: 100%;
+				max-width: 750px;
+			}
+
+			.img-thumbnail img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -89,9 +105,7 @@
 									class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
 							</button>
 							<div class="dropdown-menu dropdown-menu-end">
-								<a
-									class="dropdown-item"
-									href="#"
+								<a class="dropdown-item" href="#"
 									><i
 										class="mdi mdi mdi-face-man font-size-16 align-middle me-1"></i>
 									Profil</a
@@ -118,39 +132,39 @@
 							<li>
 								<a href="dashboard.html">
 									<i data-feather="home"></i>
-									<span
-										>Dashboard</span
-									>
+									<span>Dashboard</span>
 								</a>
 							</li>
 
-							<li class="menu-title">
-								Inovasi
-							</li>
+							<li class="menu-title">Inovasi</li>
 
 							<li>
 								<a href="jenis-inovasi.html">
-									<i class='bx bx-bulb'></i>									
+									<i class="bx bx-bulb"></i>
 									<span>Jenis Inovasi</span>
 								</a>
 							</li>
 
-                            <li>
+							<li>
 								<a href="#" class="has-arrow">
 									<i data-feather="file-text"></i>
-									<span
-										>Data Inovasi</span
-									>
+									<span>Data Inovasi</span>
 								</a>
 								<ul class="sub-menu" aria-expanded="true">
-									<li><a href="daftar-proposal.html">Daftar Proposal</a></li>
-                                    <li><a href="verifikasi-proposal.html">Verifikasi Proposal</a></li>
-                                </ul>
+									<li>
+										<a href="daftar-proposal.html"
+											>Daftar Proposal</a
+										>
+									</li>
+									<li>
+										<a href="verifikasi-proposal.html"
+											>Verifikasi Proposal</a
+										>
+									</li>
+								</ul>
 							</li>
 
-							<li class="menu-title">
-								Pengguna
-							</li>
+							<li class="menu-title">Pengguna</li>
 
 							<li>
 								<a href="data-opd.html">
@@ -162,51 +176,43 @@
 							<li>
 								<a href="#" class="has-arrow">
 									<i data-feather="users"></i>
-									<span
-										>Data Pengguna</span
-									>
+									<span>Data Pengguna</span>
 								</a>
 								<ul class="sub-menu" aria-expanded="true">
-                                    <li><a href="data-admin.html">Admin</a></li>
-                                    <li>
-                                        <a href="data-pegawai.html">Pegawai</a>
-                                    </li>
-									<li><a href="data-pengguna-umum.html">Umum</a></li>
-                                </ul>
+									<li><a href="data-admin.html">Admin</a></li>
+									<li>
+										<a href="data-pegawai.html">Pegawai</a>
+									</li>
+									<li>
+										<a href="data-pengguna-umum.html"
+											>Umum</a
+										>
+									</li>
+								</ul>
 							</li>
 
-							<li class="menu-title">
-								Kelola Konten
-							</li>
+							<li class="menu-title">Kelola Konten</li>
 
 							<li>
 								<a href="kelola-berita.html">
 									<i data-feather="layout"></i>
-									<span
-										>Kelola Berita</span
-									>
+									<span>Kelola Berita</span>
 								</a>
 							</li>
 
 							<li>
 								<a href="kelola-galeri.html">
 									<i data-feather="grid"></i>
-									<span
-										>Kelola Galeri</span
-									>
+									<span>Kelola Galeri</span>
 								</a>
 							</li>
 
-							<li class="menu-title">
-								Pengaturan
-							</li>
+							<li class="menu-title">Pengaturan</li>
 
 							<li>
 								<a href="pengaturan-web.html">
 									<i data-feather="settings"></i>
-									<span
-										>Pengaturan Website</span
-									>
+									<span>Pengaturan Website</span>
 								</a>
 							</li>
 						</ul>
@@ -227,9 +233,7 @@
 							<div class="col-12">
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
-									<h3 class="mb-sm-0">
-										Detail Berita
-									</h3>
+									<h3 class="mb-sm-0">Detail Berita</h3>
 
 									<div class="page-title-right">
 										<ol class="breadcrumb m-0">
@@ -252,56 +256,164 @@
 							</div>
 						</div>
 
-                        <div class="row">
+						<div class="row">
 							<div class="col-lg-12">
 								<div class="card">
 									<div class="card-body">
 										<div class="">
 											<div class="text-center mb-3">
-												<h4>Beautiful Day with Friends</h4>
+												<h4>
+													Bupati Dendi Ramadhona
+													Hadiri Peletakan Batu
+													Pertama Pembangunan Masjid
+													Ash Shihhah RSUD Pesawaran
+												</h4>
 											</div>
 											<div class="mb-4">
-												<img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail mx-auto d-block">
+												<img
+													src="assets/images/small/img-2.jpg"
+													alt=""
+													class="img-thumbnail mx-auto d-block" />
 											</div>
-		
+
 											<div class="text-center">
 												<div class="row">
-													<div class="col-sm-6">
-														<div class="mt-4 mt-sm-0">
-															<h6 class="mb-2">Date published</h6>
-															<p class="text-muted font-size-15">20 June 2022</p>
+													<div class="col-sm-4">
+														<div
+															class="mt-4 mt-sm-0">
+															<h6 class="mb-2">
+																Diposting pada
+															</h6>
+															<p
+																class="text-muted font-size-15">
+																20 Juni 2022
+															</p>
 														</div>
 													</div>
-													<div class="col-sm-6">
-														<div class="mt-4 mt-sm-0">
-															<p class="text-muted mb-2">Posted by</p>
-															<h5 class="font-size-15">Super Admin</h5>
+													<div class="col-sm-4">
+														<div
+															class="mt-4 mt-sm-0">
+															<h6 class="mb-2">
+																Status
+															</h6>
+															<span
+																class="badge bg-success rounded-pill"
+																>Diterbitkan</span
+															>
+														</div>
+													</div>
+													<div class="col-sm-4">
+														<div
+															class="mt-4 mt-sm-0">
+															<h6 class="mb-2">
+																Diposting oleh
+															</h6>
+															<p
+																class="text-muted font-size-15">
+																Super Admin
+															</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<hr>
+											<hr />
 											<div class="mt-4">
-												<div class="text-muted font-size-14">
-													<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam enim ad minima veniam quis</p>
-		
-													<p class="mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt</p>
-		
-													<blockquote class="p-4 border-light border rounded mb-4">
-														<div class="d-flex">
-															<div class="me-3">
-																<i class="bx bxs-quote-alt-left text-body font-size-24"></i>
-															</div>
-															<div>
-																<p class="mb-0"> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium deleniti atque corrupti quos dolores et quas molestias excepturi sint quidem rerum facilis est</p>
-															</div>
-														</div>
-		
-													</blockquote>
-		
-													<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Sed ut perspiciatis unde omnis iste natus error sit</p>
-													<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolorem fugiat sed veniam iste ducimus, harum praesentium nobis soluta nostrum officia, accusantium facilis! Earum illo fugit praesentium veritatis, beatae aperiam!</p>
-													<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Sed ut perspiciatis unde omnis iste natus error sit</p>
+												<div
+													class="text-muted font-size-14">
+													<p>
+														Pesawaran, 31 Oktober
+														2024 - Bupati Pesawaran
+														Dendi Ramadhona
+														menghadiri dan memimpin
+														secara langsung
+														peletakan batu pertama
+														pembangunan Masjid
+														Ash-Shihah RSUD
+														Kabupaten Pesawaran pada
+														Kamis, (31/10/2024).
+														Turut hadir mendampingi
+														Kepala Dinas Kesehatan
+														Media Apriliana, Kepala
+														Kantor Kementerian
+														Agama, Kadis
+														Kominfotiksan yang
+														diwakili Sekretaris
+														Dinas Apriya, Direktur
+														RSUD Dian Adhitama,
+														serta para tamu undangan
+														lainnya. Dalam
+														laporannya, Direktur
+														RSUD Pesawaran Dian
+														Adhitama mengatakan
+														bahwa pembangunan Masjid
+														Ash-Shihah dengan luas
+														bangunan 9 x 12 m² ini,
+														merupakan bagian dari
+														upaya RSUD Pesawaran
+														dalam menghadirkan
+														pelayanan yang optimal
+														kepada masyarakat.
+														Dirinya berharap agar
+														niat baik ini bisa
+														menjadi catatan amal
+														kebaikan dan sudah
+														menjadi tanggung jawab
+														umat muslim untuk
+														mengisi dan merawatnya.
+														"Tentu kami berharap
+														pembangunan ini dapat
+														selesai sesuai dengan
+														harapan dan bisa
+														bermanfaat untuk kita
+														semua," ujarnya. Bupati
+														Pesawaran Dendi
+														Ramadhona yang turut
+														hadir langsung
+														mengucapkan rasa
+														syukurnya atas
+														pembangunan masjid yang
+														dilakukan. Sebagai
+														bagian dari layanan
+														publik, RSUD sudah
+														sepatutnya memberikan
+														fasilitas yang tidak
+														hanya lengkap secara
+														kebutuhan medis, tapi
+														juga kebutuhan psikis
+														dan spiritual. "Tentu
+														masjid ini ke depan akan
+														sangat bermanfaat
+														sebagai tempat
+														bermunajat dan memohon
+														kepada Allah atas proses
+														penyembuhan yang sedang
+														dilakukan," kata Bupati.
+														Pada kesempatan ini,
+														Bupati juga turut
+														meminta kepada pengurus
+														masjid untuk
+														memanfaatkan rumah
+														ibadah ini dengan baik
+														untuk kepentingan umat.
+														Tidak hanya sebatas
+														pegawai rumah sakit atau
+														pasien namun juga
+														masyarakat sekitar.
+														"Sesuai dengan namanya
+														Ash- Shihhah ini dalam
+														bahasa arab artinya
+														sehat, semoga bisa
+														membawa manfaat dan
+														keberkahan bagi
+														masyarakat. Terutama
+														bagi para pasien yang
+														tengah berikhtiar dalam
+														proses penyembuhan bisa
+														diperlancar dan bisa
+														sembuh dengan maksimal,"
+														ujar Bupati
+														Dendi.(Ihwan)
+													</p>
 												</div>
 											</div>
 										</div>
@@ -309,19 +421,22 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<footer class="footer">
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-sm-6">
 										Balitbang Pesawaran ©
 										<script>
-											document.write(new Date().getFullYear());
+											document.write(
+												new Date().getFullYear(),
+											);
 										</script>
 										All Right Reserved.
 									</div>
 									<div class="col-sm-6">
-										<div class="text-sm-end d-none d-sm-block">
+										<div
+											class="text-sm-end d-none d-sm-block">
 											Developed by
 											<a
 												href="#"
@@ -370,7 +485,7 @@
 							>Light</label
 						>
 					</div>
-					
+
 					<div class="form-check form-check-inline">
 						<input
 							class="form-check-input"
@@ -383,7 +498,7 @@
 							>Fluid</label
 						>
 					</div>
-					
+
 					<div class="form-check form-check-inline">
 						<input
 							class="form-check-input"
@@ -471,33 +586,33 @@
 		<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
 		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
 		<!-- Buttons examples -->
-        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+		<script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 		<script src="assets/js/app.js"></script>
 		<!-- Sweet Alerts js -->
-        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
-        <!-- Sweet alert init js-->
+		<script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+		<!-- Sweet alert init js-->
 		<script>
 			document
-		.getElementById("sa-warning")
-		.addEventListener("click", function () {
-			Swal.fire({
-				title: "Konfirmasi hapus data?",
-				text: "",
-				icon: "warning",
-				showCancelButton: !0,
-				confirmButtonColor: "#2ab57d",
-				cancelButtonColor: "#fd625e",
-				confirmButtonText: "Hapus",
-				cancelButtonText: "Batal",
-			}).then(function (e) {
-				e.value &&
-					Swal.fire(
-						"Terhapus!",
-						"Data telah dihapus",
-						"success",
-					);
-			});
-		});
+				.getElementById("sa-warning")
+				.addEventListener("click", function () {
+					Swal.fire({
+						title: "Konfirmasi hapus data?",
+						text: "",
+						icon: "warning",
+						showCancelButton: !0,
+						confirmButtonColor: "#2ab57d",
+						cancelButtonColor: "#fd625e",
+						confirmButtonText: "Hapus",
+						cancelButtonText: "Batal",
+					}).then(function (e) {
+						e.value &&
+							Swal.fire(
+								"Terhapus!",
+								"Data telah dihapus",
+								"success",
+							);
+					});
+				});
 		</script>
 	</body>
 </html>
