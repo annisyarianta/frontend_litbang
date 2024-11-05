@@ -326,12 +326,12 @@
 						Balitbang Kabupaten Pesawaran
 					</h1>
 					<div class="weekly-news-area">
-						<div
-							class="weekly-wrapper">
+						<div class="weekly-wrapper">
 							<div class="row">
 								<div class="col-lg-12">
 									<div class="mb-3 text-end">
-										<button class="btn btn-rounded waves-effect waves-light">
+										<button
+											class="btn btn-rounded waves-effect waves-light">
 											Tampilkan Semua
 										</button>
 									</div>
@@ -345,12 +345,16 @@
 											<div class="weekly-img">
 												<img
 													src="assets/images/small/img-5.jpg"
-													alt="" />
+													alt=""
+													class="myImg" />
 											</div>
 											<div class="weekly-caption">
 												<h4>
-													<a href="#"
-														>Bupati Dendi Ramadhona Hadiri Peletakan Batu Pertama Pembangunan Masjid Ash Shihh...</a
+													<a class="captionClick"
+														>Bupati Dendi Ramadhona
+														Hadiri Peletakan Batu
+														Pertama Pembangunan
+														Masjid Ash Shihh...</a
 													>
 												</h4>
 											</div>
@@ -358,14 +362,18 @@
 										<div class="weekly-single">
 											<div class="weekly-img">
 												<img
-													src="assets/images/small/img-1.jpg"
-													alt="" />
+													src="assets/images/small/img-4.jpg"
+													alt=""
+													class="myImg" />
 											</div>
 											<div class="weekly-caption">
 												<h4>
-													<a href="#"
-														>Welcome To The Best
-														Model Winner Contest</a
+													<a class="captionClick"
+														>Lorem ipsum dolor sit
+														amet consectetur
+														adipisicing elit. A
+														accusamus dolore in
+														animi amet...</a
 													>
 												</h4>
 											</div>
@@ -373,14 +381,17 @@
 										<div class="weekly-single">
 											<div class="weekly-img">
 												<img
-													src="assets/images/small/img-6.jpg"
-													alt="" />
+													src="assets/images/small/img-3.jpg"
+													alt=""
+													class="myImg" />
 											</div>
 											<div class="weekly-caption">
 												<h4>
-													<a href="#"
-														>Welcome To The Best
-														Model Winner Contest</a
+													<a class="captionClick"
+														>Bawaslu Merekomendasi
+														Camat di Pesawaran
+														Lampung Dapat Sanksi
+														BKN...</a
 													>
 												</h4>
 											</div>
@@ -389,13 +400,16 @@
 											<div class="weekly-img">
 												<img
 													src="assets/images/small/img-7.jpg"
-													alt="" />
+													alt=""
+													class="myImg" />
 											</div>
 											<div class="weekly-caption">
 												<h4>
-													<a href="#"
-														>Welcome To The Best
-														Model Winner Contest</a
+													<a class="captionClick"
+														>Swasembada Pangan
+														Budidaya Peternakan Ikan
+														Air Tawar Di
+														Pesawaran...</a
 													>
 												</h4>
 											</div>
@@ -465,6 +479,18 @@
 			</footer>
 		</div>
 
+		<!-- Modal Images -->
+		<div id="myModal" class="modal">
+			<!-- The Close Button -->
+			<span class="close">&times;</span>
+
+			<!-- Modal Content (The Image) -->
+			<img class="modal-content" id="img01" />
+
+			<!-- Modal Caption (Image Text) -->
+			<div id="caption"></div>
+		</div>
+
 		<!-- JAVASCRIPT -->
 		<script src="assets/libs/jquery/jquery.min.js"></script>
 		<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -496,5 +522,37 @@
 
 		<!-- Jquery Plugins, main Jquery -->
 		<script src="assets/js/main.js"></script>
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+
+			// Get all images and captions
+			var images = document.querySelectorAll(".myImg");
+			var captions = document.querySelectorAll(".captionClick");
+
+			// Function to open the modal with the specific image and caption
+			function openModal(imgSrc, caption) {
+				modal.style.display = "block";
+				modalImg.src = imgSrc;
+				captionText.innerHTML = caption;
+			}
+
+			// Add click events to each caption
+			captions.forEach((caption, index) => {
+				caption.onclick = function () {
+					openModal(images[index].src, caption.textContent);
+				};
+			});
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function () {
+				modal.style.display = "none";
+			};
+		</script>
 	</body>
 </html>
