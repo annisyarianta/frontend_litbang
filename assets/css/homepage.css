@@ -156,12 +156,12 @@ body {
     padding-bottom: 60px;
 }
 
-.weekly-news-area .weekly-wrapper button {
+.showall-btn button {
     color: #0077c2;
     border-color: #0077c2;
 }
 
-.weekly-news-area .weekly-wrapper button:hover {
+.showall-btn button:hover {
     background-color: #0077c2;
     color: white;
 }
@@ -360,39 +360,13 @@ body {
 .video-gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .video-card {
-    width: 200px;
+    width: 900px;
     margin: 10px;
     position: relative;
-}
-
-.video-thumbnail {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.video-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 5px;
-}
-
-.play-button {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
 }
 
 .footer-logo {
