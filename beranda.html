@@ -1,286 +1,614 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Beranda | Rumah Inovasi</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- App favicon -->
-		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />        
-        <!-- plugin css -->
-        <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-        <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-        <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <!-- App Css-->
-        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Beranda | Rumah Inovasi</title>
+		<!-- App favicon -->
+		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
+		<!-- plugin css -->
+		<link
+			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
+			rel="stylesheet"
+			type="text/css" />
+		<!-- Bootstrap Css -->
+		<link
+			href="assets/css/bootstrap.min.css"
+			id="bootstrap-style"
+			rel="stylesheet"
+			type="text/css" />
+		<!-- Icons Css -->
+		<link
+			href="assets/css/icons.min.css"
+			rel="stylesheet"
+			type="text/css" />
+		<!-- App Css-->
+		<link
+			href="assets/css/app.min.css"
+			id="app-style"
+			rel="stylesheet"
+			type="text/css" />
+		<style>
+			body {
+				width: 100%;
+				overflow-x: hidden;
+				margin: 0;
+				padding: 0;
+				color: #000;
+			}
+			.container-fluid {
+				padding: 0 150px;
+			}
+			.topbar {
+				background-color: #0077c2;
+				color: white;
+				padding: 10px 150px;
+				text-align: start;
+				font-weight: bold;
+				font-size: 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.topbar-social a {
+				color: #fff;
+				margin-left: 15px;
+				text-decoration: none;
+			}
+			.navbar {
+				background-color: #fff;
+				padding: 10px 0;
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+				position: sticky;
+				top: 0;
+				z-index: 1030;
+				border-top-right-radius: 50px;
+				border-top-left-radius: 50px;
+				transition: border-radius 0.3s ease;
+			}
+			.navbar.scrolled {
+				border-top-right-radius: 0;
+				border-top-left-radius: 0;
+			}
+			.navbar-brand img {
+				height: 40px;
+				margin-right: 10px;
+			}
+			.navbar-nav .nav-link {
+				color: #5a5a5a;
+				font-weight: 500;
+				margin-right: 15px;
+				font-size: 15px;
+			}
+			.navbar-nav .nav-link:hover {
+				color: #0077c2;
+			}
+			.navbar-collapse button {
+				color: #5a5a5a;
+				font-weight: 500;
+				font-size: 15px;
+			}
+			.navbar-collapse button:hover {
+				background-color: rgba(81, 86, 190, 0.2);
+				color: #0077c2;
+			}
+			.carousel-inner img {
+				width: 100%; 
+				height: 550px; 
+				object-fit: cover; 
+			}
+			.section-title {
+				font-weight: bold;
+				margin-bottom: 25px;
+			}
+			.news-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 0;
+			}
 
-    <body data-layout="horizontal">
-        <div id="layout-wrapper">
-            <header id="page-topbar">
-                <div class="navbar-header">
-                    <div class="d-flex">
-                        <!-- LOGO -->
-                        <div class="navbar-brand-box">
-							<a href="#" class="logo logo-dark">
-								<span class="logo-sm">
-									<img
-										src="assets/images/logo_litbang.png"
-										alt=""
-										height="35" />
-								</span>
-								<span class="logo-lg">
-									<img
-										src="assets/images/logo_litbang.png"
-										alt=""
-										height="35" />
-									<span class="logo-txt">Rumah Inovasi</span>
-								</span>
-							</a>
-						</div>
+			.news-header h1 {
+				font-size: 1.8rem;
+			}
 
-                        <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
-                            <i class="fa fa-fw fa-bars"></i>
-                        </button>
-                    </div>
+			.news-header .btn-view-all {
+				font-size: 0.9rem;
+				color: #0077c2;
+				border: 1px solid #0077c2;
+				border-radius: 20px;
+				padding: 5px 15px;
+				background: transparent;
+				cursor: pointer;
+			}
 
-                    <div class="d-flex">
-                        <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item bg-light-subtle border-start border-end" id="page-header-user-dropdown"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
-                                    alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Shawn L.</span>
-                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#"><i class="mdi mdi mdi-face-man font-size-16 align-middle me-1"></i> Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+			.news-item {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;          /* Menengahkan item secara vertikal */
+				margin-bottom: 20px;
+				border-bottom: 1px solid #ddd;
+				padding-bottom: 20px;
+			}
 
-            <div class="topnav">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
-                        <div class="collapse navbar-collapse" id="topnav-menu-content">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" role="button">
-                                        <span>Beranda</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" role="button">
-                                        <span>Tentang</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" role="button">
-                                        <span>Visi & Misi</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
-                                        <span>Database Inovasi</span> <div class="arrow-down"></div>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="topnav-pages">
-                                        <a href="#" class="dropdown-item">Riset</a>
-                                        <a href="#" class="dropdown-item">Inovasi</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" role="button">
-                                        <span>Peta Inovasi</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" role="button">
-                                        <span>Regulasi</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+			.news-item .news-image {
+				flex: 1 1 100px;
+				margin-left: 75px;
+				order: 2;
+			}
 
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
-            <div class="main-content">
-                <div class="page-content">
-                    <div class="container-fluid">
-                        
+			.news-item .news-content {
+				flex: 2 1 300px;
+				order: 1;
+			}
 
-                    </div>
-                </div>
-                <!-- End Page-content -->
+			.news-image img {
+				width: 400px;
+				height: auto;
+				border-radius: 15px;
+				object-fit: cover;
+				height: 230px; 
+			}
 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                Balitbang Pesawaran ©
-                                <script>document.write(new Date().getFullYear())</script> All Right Reserved.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-end d-none d-sm-block">
-                                    Developed by <a href="#!" class="text-decoration-underline">Tim 2 MSIB 7</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-        
-        <!-- Right Sidebar -->
-        <div class="right-bar">
-			<div data-simplebar class="h-100">
-				<!-- Settings -->
-				<hr class="m-0" />
+			.news-meta {
+				font-size: 0.8rem;
+				color: gray;
+				margin-bottom: 10px;
+			}
 
-				<div class="p-4">
-					<h6 class="mb-3">Layout</h6>
-					<div class="form-check form-check-inline">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="layout"
-							id="layout-vertical"
-							value="vertical" />
-						<label class="form-check-label" for="layout-vertical"
-							>Vertical</label
-						>
-					</div>
+			.news-title {
+				font-size: 1.4rem;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 10px;
+			}
 
-					<div class="form-check form-check-inline">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="layout-mode"
-							id="layout-mode-light"
-							value="light" />
-						<label class="form-check-label" for="layout-mode-light"
-							>Light</label
-						>
-					</div>
-					
-					<div class="form-check form-check-inline">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="layout-width"
-							id="layout-width-fuild"
-							value="fuild"
-							onchange="document.body.setAttribute('data-layout-size', 'fluid')" />
-						<label class="form-check-label" for="layout-width-fuild"
-							>Fluid</label
-						>
-					</div>
-					
-					<div class="form-check form-check-inline">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="layout-position"
-							id="layout-position-fixed"
-							value="fixed"
-							onchange="document.body.setAttribute('data-layout-scrollable', 'false')" />
-						<label
-							class="form-check-label"
-							for="layout-position-fixed"
-							>Fixed</label
-						>
-					</div>
-					<div class="form-check form-check-inline">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="topbar-color"
-							id="topbar-color-light"
-							value="light"
-							onchange="document.body.setAttribute('data-topbar', 'light')" />
-						<label class="form-check-label" for="topbar-color-light"
-							>Light</label
-						>
-					</div>
-					<div class="form-check sidebar-setting">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="sidebar-size"
-							id="sidebar-size-default"
-							value="default"
-							onchange="document.body.setAttribute('data-sidebar-size', 'lg')" />
-						<label
-							class="form-check-label"
-							for="sidebar-size-default"
-							>Default</label
-						>
-					</div>
+			.news-description {
+				font-size: 0.9rem;
+				color: #555;
+			}
 
-					<div class="form-check sidebar-setting">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="sidebar-color"
-							id="sidebar-color-light"
-							value="light"
-							onchange="document.body.setAttribute('data-sidebar', 'light')" />
-						<label
-							class="form-check-label"
-							for="sidebar-color-light"
-							>Light</label
-						>
-					</div>
-
-					<div class="form-check form-check-inline">
-						<input
-							class="form-check-input"
-							type="radio"
-							name="layout-direction"
-							id="layout-direction-ltr"
-							value="ltr" />
-						<label
-							class="form-check-label"
-							for="layout-direction-ltr"
-							>LTR</label
-						>
-					</div>
+			/* Responsive */
+			@media (max-width: 576px) {
+				.news-header h1 {
+					font-size: 1.5rem;
+				}
+				.news-item {
+					flex-direction: column;
+				}
+				.news-image {
+					margin-bottom: 10px;
+					max-width: 100%;
+				}
+				.news-content,
+				.news-image {
+					order: unset;
+					max-width: 100%;
+					margin-left: 0;
+					margin-bottom: 10px;
+				}
+			}
+			.gallery-photo {
+				width: 200px;
+				height: auto;
+			}
+			.video-gallery {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.video-card {
+				width: 200px;
+				margin: 10px;
+				position: relative;
+			}
+			.video-thumbnail {
+				width: 100%;
+				border-radius: 5px;
+			}
+			.video-overlay {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: rgba(0, 0, 0, 0.5);
+				color: white;
+				border-radius: 5px;
+			}
+			.play-button {
+				font-size: 24px;
+				background: none;
+				border: none;
+				color: white;
+				cursor: pointer;
+			}
+			.footer-logo {
+				width: 80px;
+			}
+			.social-links a {
+				margin: 0 10px;
+				color: #0077c2;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="layout-wrapper">
+			<!-- Topbar -->
+			<div class="topbar">
+				<span>Kabupaten Pesawaran</span>
+				<div class="topbar-social">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
 				</div>
 			</div>
+			<div class="rounded-bg" style="background-color: #0077c2">
+				<!-- Navbar -->
+				<nav class="navbar navbar-expand-lg">
+					<div class="container-fluid">
+						<a
+							class="navbar-brand d-flex align-items-center"
+							href="#">
+							<img
+								src="assets/images/logo_litbang.png"
+								alt="Logo" />
+							<span
+								style="
+									color: #0077c2;
+									font-weight: bold;
+									font-size: 25px;
+								"
+								>Balitbang</span
+							>
+						</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarNav"
+							aria-controls="navbarNav"
+							aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav ms-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="#">Beranda</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Tentang</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Visi & Misi</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="databaseInovasiDropdown"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false">
+										Database Inovasi
+										<i class="bx bxs-chevron-down ms-1"></i>
+									</a>
+									<div
+										class="dropdown-menu"
+										aria-labelledby="databaseInovasiDropdown">
+										<a class="dropdown-item" href="#"
+											>Riset</a
+										>
+										<a class="dropdown-item" href="#"
+											>Inovasi</a
+										>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"
+										>Peta Inovasi</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Regulasi</a>
+								</li>
+							</ul>
+							<button
+								type="button"
+								class="btn btn-light btn-rounded waves-effect">
+								<i
+									class="fas fa-user font-size-16 align-middle me-2"></i>
+								Masuk
+							</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+
+			<!-- Content -->
+			<div class="container-fluid">
+				<!-- Carousel -->
+				<div id="demo" class="carousel slide" data-bs-ride="carousel">
+					<!-- Indicators/dots -->
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#demo"
+							data-bs-slide-to="0"
+							class="active"></button>
+						<button
+							type="button"
+							data-bs-target="#demo"
+							data-bs-slide-to="1"></button>
+						<button
+							type="button"
+							data-bs-target="#demo"
+							data-bs-slide-to="2"></button>
+					</div>
+
+					<!-- The slideshow/carousel -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img
+								src="assets/images/users/avatar-7.jpg"
+								alt="Los Angeles"
+								class="d-block"
+								style="width: 100%" />
+						</div>
+						<div class="carousel-item">
+							<img
+								src="assets/images/small/img-2.jpg"
+								alt="Chicago"
+								class="d-block"
+								style="width: 100%" />
+						</div>
+						<div class="carousel-item">
+							<img
+								src="assets/images/small/img-3.jpg"
+								alt="New York"
+								class="d-block"
+								style="width: 100%" />
+						</div>
+					</div>
+
+					<!-- Left and right controls/icons -->
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#demo"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#demo"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+				<!-- Ketua & Wakil Section -->
+				<section class="py-5">
+					<h1 class="section-title">
+						<span style="color: #0077c2">Ketua & Wakil</span>
+						Balitbang Kabupaten Pesawaran
+					</h1>
+					<div class="d-flex justify-content-center">
+						<img
+							src="assets/images/bupati.png"
+							alt="Ketua"
+							class="img-fluid mx-2" />
+						<img
+							src="assets/images/wakil-bupati.png"
+							alt="Wakil"
+							class="img-fluid mx-2" />
+					</div>
+				</section>
+
+				<!-- Berita Section -->
+				<section class="py-5">
+					<h1 class="section-title">
+						<span style="color: #0077c2">Berita & Inovasi</span>
+						Balitbang Kabupaten Pesawaran
+					</h1>
+					<div class="news-item">
+						<div class="news-image">
+							<img
+								src="assets/images/small/img-3.jpg"
+								alt="News Image" />
+						</div>
+						<div class="news-content">
+							<div class="news-meta">
+								01 Oct 2024 | Diunggah oleh <span>Superadmin</span>
+							</div>
+							<div class="news-title">
+								Bupati Dendi Ramadhona Hadiri Peletakan Batu
+								Pertama Pembangunan Masjid Ash Shihhah RSUD
+								Pesawaran
+							</div>
+							<div class="news-description">
+								Pesawaran, 31 Oktober 2024 - Bupati Pesawaran
+								Dendi Ramadhona menghadiri dan memimpin secara
+								langsung peletakan batu pertama pembangunan
+								Masjid Ash-Shihah RSUD Kabupaten Pesawaran pada
+								Kamis, (31/10/2024). Turut hadir mendampingi
+								Kepala Dinas Kesehatan Media Apriliana, Kepala
+								Kantor Kementerian Agama, Kadis Kominfotiksan
+								yang diwakili Sekretaris Dinas Apriya, Direktur
+								RSUD Dian Adhitama, serta para tamu undangan
+								lainnya....
+							</div>
+							<div class="mt-2">
+								<a href="#" class="align-middle">Selengkapnya <i class="mdi mdi-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="news-item">
+						<div class="news-image">
+							<img
+								src="assets/images/users/avatar-2.jpg"
+								alt="News Image" />
+						</div>
+						<div class="news-content">
+							<div class="news-meta">
+								01 Oct 2024 | Diunggah oleh <span>Superadmin</span>
+							</div>
+							<div class="news-title">
+								Bupati Dendi Ramadhona Hadiri Peletakan Batu
+								Pertama Pembangunan Masjid Ash Shihhah RSUD
+								Pesawaran
+							</div>
+							<div class="news-description">
+								Pesawaran, 31 Oktober 2024 - Bupati Pesawaran
+								Dendi Ramadhona menghadiri dan memimpin secara
+								langsung peletakan batu pertama pembangunan
+								Masjid Ash-Shihah RSUD Kabupaten Pesawaran pada
+								Kamis, (31/10/2024).
+							</div>
+							<div class="mt-2">
+								<a href="#" class="align-middle">Selengkapnya <i class="mdi mdi-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="news-item">
+						<div class="news-image">
+							<img
+								src="assets/images/small/img-3.jpg"
+								alt="News Image" />
+						</div>
+						<div class="news-content">
+							<div class="news-meta">
+								01 Oct 2024 | Diunggah oleh <span>Superadmin</span>
+							</div>
+							<div class="news-title">
+								Bupati Dendi Ramadhona Hadiri Peletakan Batu
+								Pertama Pembangunan Masjid Ash Shihhah RSUD
+								Pesawaran
+							</div>
+							<div class="news-description">
+								Pesawaran, 31 Oktober 2024 - Bupati Pesawaran
+								Dendi Ramadhona menghadiri dan memimpin secara
+								langsung peletakan batu pertama pembangunan
+								Masjid Ash-Shihah RSUD Kabupaten Pesawaran pada
+								Kamis, (31/10/2024). Turut hadir mendampingi
+								Kepala Dinas Kesehatan Media Apriliana, Kepala
+								Kantor Kementerian Agama, Kadis Kominfotiksan
+								yang diwakili Sekretaris Dinas Apriya, Direktur
+								RSUD Dian Adhitama, serta para tamu undangan
+								lainnya.
+							</div>
+							<div class="mt-2">
+								<a href="#" class="align-middle">Selengkapnya <i class="mdi mdi-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Foto Section -->
+				<section class="py-5">
+					<h2 class="section-title text-primary">Galeri Foto</h2>
+					<div class="photo-gallery d-flex justify-content-center">
+						<img
+							src="assets/images/small/img-5.jpg"
+							alt="Foto 1"
+							class="gallery-photo me-2 rounded" />
+						<img
+							src="assets/images/small/img-4.jpg"
+							alt="Foto 2"
+							class="gallery-photo me-2 rounded" />
+						<img
+							src="assets/images/small/img-6.jpg"
+							alt="Foto 3"
+							class="gallery-photo rounded" />
+					</div>
+				</section>
+
+				<!-- Video Section -->
+				<section class="py-5">
+					<div
+						class="d-flex justify-content-between align-items-center">
+						<h2 class="section-title text-primary">
+							Video Event & Kegiatan
+						</h2>
+						<button class="btn btn-outline-primary">
+							Tampilkan Semua
+						</button>
+					</div>
+					<div
+						class="video-gallery d-flex justify-content-center flex-wrap">
+						<div class="video-card">
+							<img
+								src="assets/images/video-1.jpg"
+								alt="Video 1"
+								class="video-thumbnail" />
+							<div class="video-overlay">
+								<button class="play-button">
+									<i class="fas fa-play"></i>
+								</button>
+							</div>
+							<p class="video-caption">
+								18 Agu 2024 &bull; Lorem ipsum dolor sit amet...
+							</p>
+						</div>
+						<!-- Duplicate the above .video-card div as needed for more video items -->
+					</div>
+				</section>
+			</div>
+			<!-- Footer Section -->
+			<footer class="py-5 text-center">
+				<div class="footer-content">
+					<img
+						src="assets/images/logo_litbang.png"
+						alt="Logo Balitbang"
+						class="footer-logo mb-3" />
+					<p>Balitbang, Kabupaten Pesawaran</p>
+					<address>
+						<p>Email: balitbangpesawaran@gmail.com</p>
+						<p>Telp: (0733) 4564000</p>
+						<p>Jl. Pangeran Mohamad Amin</p>
+					</address>
+					<div class="social-links">
+						<a href="#"><i class="fab fa-facebook"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-youtube"></i></a>
+					</div>
+					<p>
+						Copyright &copy; 2024 - 2030 Badan Penelitian dan
+						Pengembangan Kabupaten Pesawaran
+					</p>
+				</div>
+			</footer>
 		</div>
-        <!-- /Right-bar -->
 
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay"></div>
-
-        <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <!-- pace js -->
-        <script src="assets/libs/pace-js/pace.min.js"></script>
-
-        <!-- apexcharts -->
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-        <!-- Plugins js-->
-        <script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-        <!-- dashboard init -->
-        <script src="assets/js/pages/dashboard.init.js"></script>
-
-        <script src="assets/js/app.js"></script>
-
-    </body>
+		<!-- JAVASCRIPT -->
+		<script src="assets/libs/jquery/jquery.min.js"></script>
+		<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+		<script src="assets/libs/simplebar/simplebar.min.js"></script>
+		<script src="assets/libs/node-waves/waves.min.js"></script>
+		<script src="assets/libs/feather-icons/feather.min.js"></script>
+		<!-- pace js -->
+		<script src="assets/libs/pace-js/pace.min.js"></script>
+		<!-- Plugins js-->
+		<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script>
+			window.addEventListener("scroll", function () {
+				const navbar = document.querySelector(".navbar");
+				if (window.scrollY > 0) {
+					navbar.classList.add("scrolled");
+				} else {
+					navbar.classList.remove("scrolled");
+				}
+			});
+		</script>
+	</body>
 </html>
