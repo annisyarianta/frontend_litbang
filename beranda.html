@@ -6,11 +6,9 @@
 		<title>Beranda | Rumah Inovasi</title>
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
-		<!-- plugin css -->
 		<link
-			href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
-			rel="stylesheet"
-			type="text/css" />
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+			rel="stylesheet" />
 		<!-- Bootstrap Css -->
 		<link
 			href="assets/css/bootstrap.min.css"
@@ -20,12 +18,6 @@
 		<!-- Icons Css -->
 		<link
 			href="assets/css/icons.min.css"
-			rel="stylesheet"
-			type="text/css" />
-		<!-- App Css-->
-		<link
-			href="assets/css/app.min.css"
-			id="app-style"
 			rel="stylesheet"
 			type="text/css" />
 		<link rel="stylesheet" href="assets/css/slick.css" />
@@ -43,94 +35,87 @@
 					<a href="#"><i class="fab fa-youtube"></i></a>
 				</div>
 			</div>
-			<div style="background-color: #0077c2">
-				<!-- Navbar -->
-				<nav class="navbar navbar-expand-lg">
-					<div class="container-fluid">
-						<a
-							class="navbar-brand d-flex align-items-center"
-							href="#">
-							<img
-								src="assets/images/logo_litbang.png"
-								alt="Logo" />
-							<span
-								style="
-									color: #0077c2;
-									font-weight: bold;
-									font-size: 25px;
-								"
-								>Balitbang</span
-							>
-						</a>
-						<button
-							class="navbar-toggler"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#navbarNav"
-							aria-controls="navbarNav"
-							aria-expanded="false"
-							aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg" id="mainNavbar">
+				<div class="container-fluid justify-content-between">
+					<a class="navbar-brand d-flex align-items-center" href="#">
+						<img src="assets/images/logo_litbang.png" alt="Logo" />
+						<span
+							style="
+								color: #0077c2;
+								font-weight: bold;
+								font-size: 25px;
+							"
+							>Balitbang</span
+						>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-						<div class="collapse navbar-collapse" id="navbarNav">
-							<ul class="navbar-nav ms-auto">
-								<li class="nav-item">
-									<a class="nav-link" href="#">Beranda</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Tentang</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Visi & Misi</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a
-										class="nav-link dropdown-toggle"
-										href="#"
-										id="databaseInovasiDropdown"
-										role="button"
-										data-bs-toggle="dropdown"
-										aria-expanded="false">
-										Database Inovasi
-										<i class="bx bxs-chevron-down ms-1"></i>
-									</a>
-									<div
-										class="dropdown-menu"
-										aria-labelledby="databaseInovasiDropdown">
-										<a class="dropdown-item" href="#"
-											>Riset</a
-										>
-										<a class="dropdown-item" href="#"
-											>Inovasi</a
-										>
-									</div>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#"
-										>Peta Inovasi</a
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav mx-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Beranda</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Tentang</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Visi & Misi</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="databaseInovasiDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									Database Inovasi
+									<i class="bx bxs-chevron-down ms-1"></i>
+								</a>
+								<div
+									class="dropdown-menu"
+									aria-labelledby="databaseInovasiDropdown">
+									<a class="dropdown-item" href="#">Riset</a>
+									<a class="dropdown-item" href="#"
+										>Inovasi</a
 									>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Regulasi</a>
-								</li>
-							</ul>
-							<button
-								type="button"
-								class="btn btn-light btn-rounded waves-effect">
-								<i
-									class="fas fa-user font-size-16 align-middle me-2"></i>
-								Masuk
-							</button>
-						</div>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Peta Inovasi</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Regulasi</a>
+							</li>
+						</ul>
+						<button
+							type="button"
+							class="btn btn-light btn-rounded waves-effect">
+							<i
+								class="fas fa-user font-size-16 align-middle me-2"></i>
+							Masuk
+						</button>
 					</div>
-				</nav>
-			</div>
+				</div>
+			</nav>
 
 			<!-- Content -->
-			<div class="container-fluid">
+			<div class="container-fluid mb-5">
 				<!-- Carousel -->
-				<div id="demo" class="carousel slide" data-bs-ride="carousel">
+				<div
+					id="demo"
+					class="carousel slide mb-2"
+					data-bs-ride="carousel">
 					<!-- Indicators/dots -->
 					<div class="carousel-indicators">
 						<button
@@ -439,14 +424,6 @@
 							Tampilkan Semua
 						</button>
 					</div>
-					<!-- <div
-						class="video-gallery">
-						<div class="video-card">
-							<div class="ratio ratio-16x9">
-								<iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
-							</div>
-						</div>
-					</div> -->
 					<div class="videos-section">
 						<!-- Card 1 -->
 						<div
@@ -557,27 +534,43 @@
 				</section>
 			</div>
 			<!-- Footer Section -->
-			<footer class="py-5 text-center">
-				<div class="footer-content">
-					<img
-						src="assets/images/logo_litbang.png"
-						alt="Logo Balitbang"
-						class="footer-logo mb-3" />
-					<p>Balitbang, Kabupaten Pesawaran</p>
-					<address>
-						<p>Email: balitbangpesawaran@gmail.com</p>
-						<p>Telp: (0733) 4564000</p>
-						<p>Jl. Pangeran Mohamad Amin</p>
-					</address>
-					<div class="social-links">
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-twitter"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-						<a href="#"><i class="fab fa-youtube"></i></a>
+			<footer class="footer">
+				<div class="row align-items-center mb-5">
+					<div class="col-md-3 text-center mb-4 mb-md-0">
+						<img
+							src="assets/images/logo_litbang.png"
+							alt="Logo Balitbang"
+							class="footer-logo" />
 					</div>
+					<div class="col-md-5 text-md-start mb-4 mb-md-0 ps-4">
+						<h3 class="fw-bold">Balitbang.</h3>
+						<p>balitbangpesawaran@gmail.com</p>
+						<p>(0733) 4540000</p>
+						<p>
+							Komplek Perkantoran Pemerintah Kabupaten Pesawaran, Jalan Raya Kedondong, Way Layap, Kecamatan Gedong Tataan, Kabupaten Pesawaran, Provinsi Lampung
+						</p>
+						<div class="social-links">
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="col-md-4 text-center text-md-end">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.8254389374856!2d105.07081024431248!3d-5.400336996834666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40d2f093d4a027%3A0x35fedef26ffe058a!2sDEPARTMENT%20OF%20COMMUNICATION%20AND%20INFORMATION%20kab.%20Pesawaran!5e0!3m2!1sen!2sid!4v1730910571089!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+				<div class="footer-bottom text-center">
 					<p>
-						Copyright &copy; 2024 - 2030 Badan Penelitian dan
-						Pengembangan Kabupaten Pesawaran
+						Copyright &copy; 2024
+						<a
+							href="#"
+							class="text-decoration-none"
+							style="color: #0077c2"
+							>Badan Penelitian dan Pengembangan Kabupaten
+							Pesawaran</a
+						>
+						| All rights reserved
 					</p>
 				</div>
 			</footer>
@@ -598,16 +591,8 @@
 		<!-- JAVASCRIPT -->
 		<script src="assets/libs/jquery/jquery.min.js"></script>
 		<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="assets/libs/metismenu/metisMenu.min.js"></script>
-		<script src="assets/libs/simplebar/simplebar.min.js"></script>
 		<script src="assets/libs/node-waves/waves.min.js"></script>
 		<script src="assets/libs/feather-icons/feather.min.js"></script>
-		<!-- pace js -->
-		<script src="assets/libs/pace-js/pace.min.js"></script>
-		<!-- Plugins js-->
-		<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-		<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-		<script src="assets/js/app.js"></script>
 		<script>
 			window.addEventListener("scroll", function () {
 				const navbar = document.querySelector(".navbar");
@@ -660,7 +645,8 @@
 		</script>
 		<script>
 			function goToDetail(url) {
-				window.open(url, '_blank');			}
+				window.open(url, "_blank");
+			}
 		</script>
 		<script>
 			document.querySelectorAll(".video-card").forEach((card) => {
@@ -680,6 +666,29 @@
 					if (img && videoId) {
 						img.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 					}
+				}
+			});
+		</script>
+		<script>
+			window.addEventListener("scroll", function () {
+				const navbar = document.getElementById("mainNavbar");
+				const navbarContainer = document.querySelector(".navbar-bg");
+
+				if (window.scrollY === 0) {
+					// Jika di posisi paling atas, tambahkan div dengan class navbar-bg
+					if (!navbarContainer) {
+						const wrapper = document.createElement("div");
+						wrapper.className = "navbar-bg";
+						navbar.parentNode.insertBefore(wrapper, navbar);
+						wrapper.appendChild(navbar);
+					}
+				} else if (navbarContainer) {
+					// Jika discroll ke bawah, hapus div navbar-bg
+					navbarContainer.parentNode.insertBefore(
+						navbar,
+						navbarContainer,
+					);
+					navbarContainer.remove();
 				}
 			});
 		</script>

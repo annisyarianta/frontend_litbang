@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #000;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .container-fluid {
@@ -13,7 +14,7 @@ body {
 .topbar {
     background-color: #0077c2;
     color: white;
-    padding: 10px 150px;
+    padding: 5px 150px;
     text-align: start;
     font-weight: bold;
     font-size: 20px;
@@ -37,9 +38,11 @@ body {
     z-index: 1030;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    transition: border-radius 0.3s ease;
+    transition: border-radius 0.5s ease;
 }
-
+.navbar-bg {
+    background-color: #0077c2;
+}
 .navbar.scrolled {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -55,6 +58,7 @@ body {
     font-weight: 500;
     margin-right: 15px;
     font-size: 15px;
+    
 }
 
 .navbar-nav .nav-link:hover {
@@ -108,7 +112,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* Menengahkan item secara vertikal */
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
@@ -358,17 +361,20 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
+
 .video-card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
 }
+
 .video-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
+
 .video-info {
     position: absolute;
     bottom: 0;
@@ -379,49 +385,89 @@ body {
     padding: 10px;
     border-radius: 0 0 10px 10px;
 }
+
 .video-info .date {
     font-size: 12px;
     margin-bottom: 5px;
     color: #ccc;
 }
+
 .video-info .title {
     font-size: 16px;
     font-weight: bold;
     line-height: 1.2;
 }
+
 .play-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ff0000; 
-    font-size: 48px; 
+    color: #ff0000;
+    font-size: 48px;
     opacity: 0.9;
     background-color: white;
     border-radius: 50%;
-    width: 20px; 
-    height: 20px; 
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .carousel-inner .carousel-item {
-    height: 100%; 
+    height: 100%;
 }
 
 .ratio {
-    width: 100%; 
+    width: 100%;
 }
 
-.footer-logo {
-    width: 80px;
+/* footer */
+.footer {
+    color: #333;
+    padding: 65px 150px 10px 150px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0px -4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer .footer-logo {
+    width: 170px;
+}
+
+.footer address, .footer p {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .social-links a {
-    margin: 0 10px;
+    color: #333;
+    margin-right: 30px;
+    font-size: 1.3rem;
+}
+
+.social-links a:hover {
     color: #0077c2;
-    font-size: 20px;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer-bottom a {
+    color: #0077c2;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive */
