@@ -209,11 +209,17 @@
 				</section>
 
 				<!-- Berita Section -->
-				<section class="py-5">
+				<section class="py-4">
 					<h1 class="section-title">
 						<span style="color: #0077c2">Berita & Inovasi</span>
 						Balitbang Kabupaten Pesawaran
 					</h1>
+					<div class="mb-3 text-end showall-btn">
+						<button
+							class="btn btn-rounded waves-effect waves-light">
+							Tampilkan Semua
+						</button>
+					</div>
 					<div class="news-item">
 						<div class="news-image">
 							<img
@@ -446,7 +452,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/xTBDsVl9fQQ?si=ucZu_CdzhOwAHFsD')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -456,12 +462,11 @@
 								</div>
 							</div>
 						</div>
-
 						<!-- Card 2 -->
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/-IZMJ18x1rM?si=5bJJTHpwcvKq1J3e')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -474,7 +479,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/EfWSAzXlvtc?si=vQ8B-jeo88uvJo0G')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -487,7 +492,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/GPAYzaE-trs?si=Y5J17y70rancexSq')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -500,7 +505,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/ThM0EdT1ByU?si=ayLNwlLjlGJW_N4kv')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -513,7 +518,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/v-OIspcC-E8?si=ZLVh-UtkaLm3oCoY')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -526,7 +531,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/8Ebqe2Dbzls?si=zszMygtSBz16iyhG')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -539,7 +544,7 @@
 						<div
 							class="video-card"
 							onclick="goToDetail('https://youtu.be/Nt3YH68npW4?si=RO-uPpPIBEzin7pr')">
-							<i class="fas fa-play play-icon"></i>
+							<i class="fab fa-youtube play-icon"></i>
 							<img alt="Video Thumbnail" />
 							<div class="video-info">
 								<div class="title">
@@ -655,8 +660,7 @@
 		</script>
 		<script>
 			function goToDetail(url) {
-				window.location.href = url;
-			}
+				window.open(url, '_blank');			}
 		</script>
 		<script>
 			document.querySelectorAll(".video-card").forEach((card) => {

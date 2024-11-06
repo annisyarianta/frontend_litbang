@@ -125,6 +125,14 @@ body {
     order: 1;
 }
 
+.news-content a {
+    color: #0077c2;
+}
+
+.news-content a:hover {
+    color: #0067a6;
+}
+
 .news-image img {
     width: 400px;
     border-radius: 15px;
@@ -143,6 +151,7 @@ body {
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .news-description {
@@ -269,31 +278,20 @@ body {
     border-radius: 10px;
 }
 
-/* The Modal (background) */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1040;
-    /* Sit on top */
     padding-top: 100px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
 }
 
-/* Modal Content (Image) */
 .modal-content {
     margin: auto;
     display: block;
@@ -303,7 +301,6 @@ body {
     border: none;
 }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
     margin: auto;
     display: block;
@@ -315,7 +312,6 @@ body {
     height: 150px;
 }
 
-/* Add Animation - Zoom in the Modal */
 .modal-content,
 #caption {
     animation-name: zoom;
@@ -395,18 +391,27 @@ body {
 }
 .play-icon {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff0000; 
+    font-size: 48px; 
+    opacity: 0.9;
+    background-color: white;
+    border-radius: 50%;
+    width: 20px; 
+    height: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-inner .carousel-item {
-    height: 100%; /* Adjust height as necessary */
+    height: 100%; 
 }
 
 .ratio {
-    width: 100%; /* Ensures the video ratio fits the carousel width */
+    width: 100%; 
 }
 
 .footer-logo {
