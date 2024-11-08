@@ -508,7 +508,7 @@ body {
 }
 
 /* Tentang page */
-.section-content {
+.tentang-content {
     border-right: 2px solid #ddd;
     border-top: 2px solid #ddd;
     padding-right: 10px;
@@ -583,4 +583,32 @@ body {
 
 .scrollable-headline::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Warna thumb saat di-hover */
+}
+
+/* visi misi */
+.visi-content {
+    font-size: 17px;
+    border-left: 5px solid #0077c2;
+    padding: 30px 30px;
+}
+.misi-content {
+    font-size: 17px;
+    border-left: 5px solid #0077c2;
+    padding: 10px 30px;
+}
+
+.misi-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.visimisi-image {
+    margin: 130px 0;
+}
+.visimisi-image img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    margin-top: 10px;
 }
