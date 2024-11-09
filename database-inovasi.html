@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Visi & Misi | Rumah Inovasi</title>
+		<title>Database Inovasi | Rumah Inovasi</title>
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
 		<link
@@ -90,8 +90,14 @@
 								<div
 									class="dropdown-menu"
 									aria-labelledby="databaseInovasiDropdown">
-									<a class="dropdown-item" href="database-riset.html">Riset</a>
-									<a class="dropdown-item" href="database-inovasi.html"
+									<a
+										class="dropdown-item"
+										href="database-riset.html"
+										>Riset</a
+									>
+									<a
+										class="dropdown-item"
+										href="database-inovasi.html"
 										>Inovasi</a
 									>
 								</div>
@@ -100,7 +106,9 @@
 								<a class="nav-link" href="#">Peta Inovasi</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="regulasi.html">Regulasi</a>
+								<a class="nav-link" href="regulasi.html"
+									>Regulasi</a
+								>
 							</li>
 						</ul>
 						<button
@@ -121,88 +129,13 @@
 					<li class="breadcrumb-item">
 						<a href="beranda.html">Beranda</a>
 					</li>
-					<li class="breadcrumb-item active">Visi & Misi</li>
+					<li class="breadcrumb-item active">Inovasi</li>
 				</ol>
 			</div>
 			<div class="container-fluid mb-5">
-				<!-- start page title -->
-				<div class="row mt-5">
-					<div class="col-7">
-						<h1 class="pb-4 pt-0 fw-semibold">Visi & Misi</h1>
-						<div class="mb-5">
-							<h2 class="pb-3 pt-3" style="color: #0077c2">
-								Visi :
-							</h2>
-							<p class="visi-content">
-								“Mewujudkan masyarakat Kabupaten Pesawaran yang
-								Religius, Cerdas, Sehat dan Sejahtera”
-							</p>
-						</div>
-						<div class="mb-5">
-							<h2 class="pb-3 pt-3" style="color: #0077c2">
-								Misi :
-							</h2>
-							<div class="misi-content">
-								<div class="misi-item">
-									<p>
-										Meningkatkan penerapan nilai-nilai
-										keagamaan dalam kehidupan bermasyarakat
-										menuju masyarakat yang religius.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Meningkatkan akses mutu dan pemerataan
-										pelayanan pendidikan dan kesehatan untuk
-										mewujudkan masyarakat yang cerdas dan
-										sehat.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Mengembangkan ekonomi daerah yang
-										kompetitif dan berbasis kerakyatan.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Meningkatkan kualitas tata kelola
-										pemerintahan yang professional,
-										transparan dan akuntabel.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Meningkatkan pemerataan pembangunan
-										infrastruktur yang berkelanjutan dan
-										pengelolaan lingkungan hidup berdasarkan
-										Rencana Tata Ruang Wilayah.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Mengembangkan inovasi daerah dalam
-										rangka meningkatkan kualitas daya saing
-										daerah, masyarakat dan pelaku
-										pembangunan lainnya.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-5 ps-5">
-						<div class="visimisi-image">
-							<img
-								src="assets/images/small/img-3.jpg"
-								alt="Image" />
-							<img
-								src="assets/images/small/img-3.jpg"
-								alt="Image" />
-							<img
-								src="assets/images/small/img-3.jpg"
-								alt="Image" />
-						</div>
-					</div>
+				<div class="regulasi-content">
+					<h1 class="pb-3 pt-5 fw-semibold">Database Inovasi</h1>
+					<div></div>
 				</div>
 			</div>
 			<!-- Footer Section -->
@@ -263,6 +196,37 @@
 		<script src="assets/libs/node-waves/waves.min.js"></script>
 		<script src="assets/libs/feather-icons/feather.min.js"></script>
 		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const currentUrl = window.location.pathname; // Mendapatkan URL path saat ini
+				const navLinks = document.querySelectorAll(".nav-link"); // Mendapatkan semua elemen nav-link
+
+				// Menambahkan kelas active pada setiap nav-link yang cocok dengan halaman saat ini
+				navLinks.forEach((link) => {
+					if (currentUrl.includes(link.getAttribute("href"))) {
+						link.classList.add("active");
+					}
+				});
+
+				// Menangani kasus khusus untuk dropdown 'Database Inovasi'
+				const dropdownMenu = document.getElementById(
+					"databaseInovasiDropdown",
+				);
+				if (dropdownMenu) {
+					if (currentUrl.includes("database-riset")) {
+						dropdownMenu.classList.add("active");
+						document
+							.querySelector('a[href="database-riset.html"]')
+							.classList.add("active");
+					} else if (currentUrl.includes("database-inovasi")) {
+						dropdownMenu.classList.add("active");
+						document
+							.querySelector('a[href="database-inovasi.html"]')
+							.classList.add("active");
+					}
+				}
+			});
+		</script>
+		<script>
 			window.addEventListener("scroll", function () {
 				const navbar = document.querySelector(".navbar");
 				if (window.scrollY > 0) {
@@ -292,37 +256,6 @@
 						navbarContainer,
 					);
 					navbarContainer.remove();
-				}
-			});
-		</script>
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const currentUrl = window.location.pathname; // Mendapatkan URL path saat ini
-				const navLinks = document.querySelectorAll(".nav-link"); // Mendapatkan semua elemen nav-link
-
-				// Menambahkan kelas active pada setiap nav-link yang cocok dengan halaman saat ini
-				navLinks.forEach((link) => {
-					if (currentUrl.includes(link.getAttribute("href"))) {
-						link.classList.add("active");
-					}
-				});
-
-				// Menangani kasus khusus untuk dropdown 'Database Inovasi'
-				const dropdownMenu = document.getElementById(
-					"databaseInovasiDropdown",
-				);
-				if (dropdownMenu) {
-					if (currentUrl.includes("database-riset")) {
-						dropdownMenu.classList.add("active");
-						document
-							.querySelector('a[href="database-riset.html"]')
-							.classList.add("active");
-					} else if (currentUrl.includes("database-inovasi")) {
-						dropdownMenu.classList.add("active");
-						document
-							.querySelector('a[href="database-inovasi.html"]')
-							.classList.add("active");
-					}
 				}
 			});
 		</script>

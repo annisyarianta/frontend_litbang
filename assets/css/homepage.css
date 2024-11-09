@@ -66,8 +66,11 @@ body {
     color: #0077c2;
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active, .nav-item.dropdown .dropdown-toggle.show {
     color: #0077c2 !important;
+}
+.nav-item.dropdown .nav-link.active, .dropdown-item.active {
+    color: #0077c2; 
 }
 
 .navbar-collapse button {

@@ -3,12 +3,27 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Visi & Misi | Rumah Inovasi</title>
+		<title>Database Riset | Rumah Inovasi</title>
 		<!-- App favicon -->
 		<link rel="shortcut icon" href="assets/images/logo_litbang.png" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet" />
+		<!-- DataTables -->
+		<link
+			href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+			rel="stylesheet"
+			type="text/css" />
+
+		<!-- Responsive datatable examples -->
+		<link
+			href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+			rel="stylesheet"
+			type="text/css" />
 		<!-- Bootstrap Css -->
 		<link
 			href="assets/css/bootstrap.min.css"
@@ -90,8 +105,14 @@
 								<div
 									class="dropdown-menu"
 									aria-labelledby="databaseInovasiDropdown">
-									<a class="dropdown-item" href="database-riset.html">Riset</a>
-									<a class="dropdown-item" href="database-inovasi.html"
+									<a
+										class="dropdown-item"
+										href="database-riset.html"
+										>Riset</a
+									>
+									<a
+										class="dropdown-item"
+										href="database-inovasi.html"
 										>Inovasi</a
 									>
 								</div>
@@ -100,7 +121,9 @@
 								<a class="nav-link" href="#">Peta Inovasi</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="regulasi.html">Regulasi</a>
+								<a class="nav-link" href="regulasi.html"
+									>Regulasi</a
+								>
 							</li>
 						</ul>
 						<button
@@ -121,86 +144,181 @@
 					<li class="breadcrumb-item">
 						<a href="beranda.html">Beranda</a>
 					</li>
-					<li class="breadcrumb-item active">Visi & Misi</li>
+					<li class="breadcrumb-item active">Riset</li>
 				</ol>
 			</div>
 			<div class="container-fluid mb-5">
-				<!-- start page title -->
-				<div class="row mt-5">
-					<div class="col-7">
-						<h1 class="pb-4 pt-0 fw-semibold">Visi & Misi</h1>
-						<div class="mb-5">
-							<h2 class="pb-3 pt-3" style="color: #0077c2">
-								Visi :
-							</h2>
-							<p class="visi-content">
-								“Mewujudkan masyarakat Kabupaten Pesawaran yang
-								Religius, Cerdas, Sehat dan Sejahtera”
-							</p>
-						</div>
-						<div class="mb-5">
-							<h2 class="pb-3 pt-3" style="color: #0077c2">
-								Misi :
-							</h2>
-							<div class="misi-content">
-								<div class="misi-item">
-									<p>
-										Meningkatkan penerapan nilai-nilai
-										keagamaan dalam kehidupan bermasyarakat
-										menuju masyarakat yang religius.
+				<div class="regulasi-content">
+					<h1 class="pb-4 pt-5 fw-semibold">Database Riset</h1>
+					<div class="row pb-5">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-header">
+									<p class="card-title-desc">
+										Berikut daftar data riset.
 									</p>
 								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Meningkatkan akses mutu dan pemerataan
-										pelayanan pendidikan dan kesehatan untuk
-										mewujudkan masyarakat yang cerdas dan
-										sehat.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Mengembangkan ekonomi daerah yang
-										kompetitif dan berbasis kerakyatan.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Meningkatkan kualitas tata kelola
-										pemerintahan yang professional,
-										transparan dan akuntabel.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Meningkatkan pemerataan pembangunan
-										infrastruktur yang berkelanjutan dan
-										pengelolaan lingkungan hidup berdasarkan
-										Rencana Tata Ruang Wilayah.
-									</p>
-								</div>
-								<div class="misi-item pt-3">
-									<p>
-										Mengembangkan inovasi daerah dalam
-										rangka meningkatkan kualitas daya saing
-										daerah, masyarakat dan pelaku
-										pembangunan lainnya.
-									</p>
+								<div class="card-body">
+									<table
+										id="datatable"
+										class="table table-bordered dt-responsive w-100 table-hover">
+										<thead>
+											<tr class="align-middle">
+												<th
+													class="text-center"
+													style="width: 220px">
+													Judul Proposal
+												</th>
+												<th
+													class="text-center"
+													style="width: 250px">
+													Nama OPD
+												</th>
+												<th
+													class="text-center"
+													style="width: 120px">
+													Tahun
+												</th>
+												<th
+													class="text-center"
+													style="width: 100px">
+													Aksi
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													Aksi Konsumen Cerdas Ayo
+													Mengadu (SI KOMENG)
+												</td>
+												<td>
+													Aksi Konsumen Cerdas Ayo
+													mengadu (SI KOMENG)
+													merupakan Sistem
+													Informasi...
+												</td>
+												<td class="text-center">
+													2008
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Aplikasi JDIH Kaltim
+													Berbasis Android
+												</td>
+												<td>
+													Lorem ipsum dolor, sit amet
+													consectetur adipisicing
+													elit. Suscipit laboriosam...
+												</td>
+												<td class="text-center">
+													2011
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Aplikasi Simata Laut Kaltim
+													(Sistem Informasi Tata Ruang
+													Laut Kaltim)
+												</td>
+												<td>
+													Aplikasi yang dapat
+													digunakan oleh masyarakat
+													umum untuk memberikan
+													akses...
+												</td>
+												<td class="text-center">
+													2012
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													CAP JEMPOL (lanCAr Posyandu
+													dengan menJEMput Pakai Ojek
+													Lansia)
+												</td>
+												<td>
+													Lorem ipsum dolor, sit amet
+													consectetur adipisicing
+													elit. Suscipit laboriosam...
+												</td>
+												<td class="text-center">
+													2012
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-5 ps-5">
-						<div class="visimisi-image">
-							<img
-								src="assets/images/small/img-3.jpg"
-								alt="Image" />
-							<img
-								src="assets/images/small/img-3.jpg"
-								alt="Image" />
-							<img
-								src="assets/images/small/img-3.jpg"
-								alt="Image" />
 						</div>
 					</div>
 				</div>
@@ -262,6 +380,16 @@
 		<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/libs/node-waves/waves.min.js"></script>
 		<script src="assets/libs/feather-icons/feather.min.js"></script>
+		<!-- Required datatable js -->
+		<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+		<!-- Responsive examples -->
+		<script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+		<script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+		<!-- Datatable init js -->
+		<script src="assets/js/pages/datatables.init.js"></script>
+		<!-- Buttons examples -->
+		<script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 		<script>
 			window.addEventListener("scroll", function () {
 				const navbar = document.querySelector(".navbar");
