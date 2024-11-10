@@ -9,9 +9,24 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet" />
+		<!-- DataTables -->
+		<link
+			href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+			rel="stylesheet"
+			type="text/css" />
+
+		<!-- Responsive datatable examples -->
+		<link
+			href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+			rel="stylesheet"
+			type="text/css" />
 		<!-- Bootstrap Css -->
 		<link
-			href="assets/css/bootstrap.min.css"
+			href="assets/css/bootstrap.css"
 			id="bootstrap-style"
 			rel="stylesheet"
 			type="text/css" />
@@ -135,7 +150,180 @@
 			<div class="container-fluid mb-5">
 				<div class="regulasi-content">
 					<h1 class="pb-3 pt-5 fw-semibold">Database Inovasi</h1>
-					<div></div>
+					<div class="row pb-5">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-header">
+									<p class="card-title-desc">
+										Berikut daftar data inovasi.
+									</p>
+								</div>
+								<div class="card-body">
+									<table
+										id="datatable"
+										class="table table-bordered dt-responsive w-100 table-hover">
+										<thead>
+											<tr class="align-middle">
+												<th
+													class="text-center"
+													style="width: 20px">
+													No.
+												</th>
+												<th
+													class="text-center"
+													style="width: 250px">
+													Judul Proposal
+												</th>
+												<th
+													class="text-center"
+													style="width: 280px">
+													Nama OPD
+												</th>
+												<th
+													class="text-center"
+													style="width: 120px">
+													Tahun
+												</th>
+												<th
+													class="text-center"
+													style="width: 100px">
+													Aksi
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center">1.</td>
+												<td>
+													Aksi Konsumen Cerdas Ayo
+													Mengadu (SI KOMENG)
+												</td>
+												<td>
+													Dinas Komunikasi dan
+													Informatika Pesawaran
+												</td>
+												<td class="text-center">
+													2008
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+											<tr>
+												<td class="text-center">2.</td>
+												<td>
+													Aplikasi JDIH Kaltim
+													Berbasis Android
+												</td>
+												<td>
+													Badan Hukum Kabupaten
+													Pesawaran
+												</td>
+												<td class="text-center">
+													2011
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+											<tr>
+												<td class="text-center">3.</td>
+												<td>
+													Aplikasi Simata Laut Kaltim
+													(Sistem Informasi Tata Ruang
+													Laut Kaltim)
+												</td>
+												<td>
+													Dinas Komunikasi dan
+													Informatika Pesawaran
+												</td>
+												<td class="text-center">
+													2012
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+											<tr>
+												<td class="text-center">4.</td>
+												<td>
+													CAP JEMPOL (lanCAr Posyandu
+													dengan menJEMput Pakai Ojek
+													Lansia)
+												</td>
+												<td>
+													Dinas Komunikasi dan
+													Informatika Pesawaran
+												</td>
+												<td class="text-center">
+													2012
+												</td>
+												<td class="text-center">
+													<a
+														href="#"
+														class="btn btn-outline-primary btn-sm mb-3"
+														title="Unduh">
+														<i
+															class="fas fa-download"></i>
+													</a>
+													<a
+														class="btn btn-outline-secondary btn-sm ms-2 mb-3"
+														data-bs-toggle="modal"
+														data-bs-target="#exampleModalScrollable"
+														title="Detail"
+														><i
+															class="fas fa-eye"></i
+													></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- Footer Section -->
@@ -190,11 +378,68 @@
 			</footer>
 		</div>
 
+		<!-- Modal Detail -->
+		<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="exampleModalScrollableTitle">Detail Proposal</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body card-body">
+						<div class="table-responsive">
+							<table class="table table-striped mb-0">
+								<!-- <thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+									</tr>
+								</thead> -->
+								<tbody>
+									<tr>
+										<th scope="row" style="width: 230px">Judul</th>
+										<td>Aplikasi Pelayanan Cuti ASN (SiPeCut)</td>
+									</tr>
+									<tr>
+										<th scope="row">Deskripsi</th>
+										<td>Sipecut ASN adalah aplikasi pelayanan usul cuti Aparatur Sipil Negara sebagai pembaharuan dari aplikasi sebelumnya, aplikasi ecuti. Dengan adanya SI PECUT ASN juga cuti di lingkungan pemerintah provinsi kalimantan timur terdata secara akurat dan rapi. Sepanjang tahun 2022 misalnya terdapat 783 usulan cuti yang masuk kedalam aplikasi SI PECUT ASN. Jika tanpa aplikasi data jumlah pemohon seperti ini sulit untuk didapatkan karena pengumpulan berkas dilakukan secara manual. Setelah adanya SI PECUT ASN hal - hal tersebut bukan menjadi masalah. Permohonan cuti dapat dilakukan dimana dan kapan saja secara online, dan tidak membutuhkan waktu lama untuk cuti di proses (hanya 1 hari kerja). Dengan adanya SI PECUT ASN juga cuti di lingkungan pemerintah provinsi kalimantan timur terdata secara akurat dan rapi. Sepanjang tahun 2022 misalnya terdapat 783 usulan cuti yang masuk kedalam aplikasi SI PECUT ASN. Jika tanpa aplikasi data jumlah pemohon seperti ini sulit untuk didapatkan karena pengumpulan berkas dilakukan secara manual.</td>
+									</tr>
+									<tr>
+										<th scope="row">Tanggal Pengajuan</th>
+										<td>2012/03/29</td>
+									</tr>
+									<tr>
+										<th scope="row">Diajukan oleh</th>
+										<td>Ihtiar</td>
+									</tr>
+									<tr>
+										<th scope="row">Status</th>
+										<td><span class="badge bg-secondary rounded-pill">Tertunda</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- JAVASCRIPT -->
 		<script src="assets/libs/jquery/jquery.min.js"></script>
 		<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/libs/node-waves/waves.min.js"></script>
 		<script src="assets/libs/feather-icons/feather.min.js"></script>
+		<!-- Required datatable js -->
+		<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+		<!-- Responsive examples -->
+		<script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+		<script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+		<!-- Datatable init js -->
+		<script src="assets/js/pages/datatables.init.js"></script>
+		<!-- Buttons examples -->
+		<script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
 				const currentUrl = window.location.pathname; // Mendapatkan URL path saat ini
