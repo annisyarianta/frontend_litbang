@@ -164,6 +164,9 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
 }
+.news-title:hover {
+    color: #0077c2;
+}
 
 .news-description {
     font-size: 0.9rem;
@@ -514,7 +517,8 @@ body {
 .tentang-content {
     border-right: 2px solid #ddd;
     border-top: 2px solid #ddd;
-    padding-right: 10px;
+    padding-right: 30px;
+    text-align: justify;
 }
 
 .tentang-title {
@@ -621,4 +625,79 @@ body {
     text-align: justify;
     padding: 0 100px;
     font-size: 15px;
+}
+
+/* berita all */
+.row-1 {
+    border-bottom: 2px solid #ddd;
+}
+
+.head-news {
+    border-right: 2px solid #ddd;
+    padding-right: 30px;
+}
+
+.head-news img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 20px;
+}
+
+.news-all {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news-all h4 {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.news-all h4:hover {
+    color: #0077c2;
+}
+.news-all p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.row-2 .col-8 {
+    border-left: 2px solid #ddd;
+    padding-right: 20px;
+}
+.news-other {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-left: 15px;
+}
+
+.news-other img {
+    margin-left: 35px;
+    order: 2;
+    width: 336px;
+    border-radius: 15px;
+    object-fit: cover;
+    height: 189px;
+}
+
+.news-other .other-div {
+    flex: 2 1 300px;
+    order: 1;
+    text-align: justify;
+}
+.other-div h4:hover {
+    color: #0077c2;
+}
+.other-div p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
 }
