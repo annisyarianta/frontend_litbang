@@ -627,9 +627,13 @@ body {
     font-size: 15px;
 }
 
-/* berita all */
+/* berita */
 .row-1 {
     border-bottom: 2px solid #ddd;
+}
+.news-date {
+    color: #0077c2;
+    margin-bottom: 15px;
 }
 
 .head-news {
