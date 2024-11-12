@@ -576,11 +576,9 @@ body {
 .row-1 {
     border-bottom: 2px solid #ddd;
 }
-.news-date {
-    color: #0077c2;
-    margin-bottom: 15px;
+.row-1 .col-sm-4 {
+    padding-left: 25px;
 }
-
 .head-news {
     border-right: 2px solid #ddd;
     padding-right: 30px;
@@ -844,6 +842,19 @@ body {
     }
     .modal-detail-row {
         width: 50px;
+    }
+    .head-news {
+        border-right: none;
+        padding-right: 12px;
+    }
+    .row-1 {
+        border-bottom: none;
+    }
+    .row-1 .col-sm-4 {
+        padding-left: 12px;
+    }
+    .row-2 {
+        display: none;
     }
 }
 /* Mobile View */
