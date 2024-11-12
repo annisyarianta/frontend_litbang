@@ -95,27 +95,6 @@ body {
     margin-bottom: 25px;
 }
 
-.news-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.news-header h1 {
-    font-size: 1.8rem;
-}
-
-.news-header .btn-view-all {
-    font-size: 0.9rem;
-    color: #0077c2;
-    border: 1px solid #0077c2;
-    border-radius: 20px;
-    padding: 5px 15px;
-    background: transparent;
-    cursor: pointer;
-}
-
 .news-item {
     display: flex;
     flex-wrap: wrap;
@@ -182,6 +161,7 @@ body {
 .showall-btn button {
     color: #0077c2;
     border-color: #0077c2;
+    white-space: nowrap;
 }
 
 .showall-btn button:hover {
@@ -723,6 +703,13 @@ body {
     .navbar-collapse button:hover {
         color: #0077c2;
         background: none;
+    }
+    .carousel-inner img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+    .news-title {
+        font-size: 1.2rem;
     }
     .weekly-news-area .weekly-wrapper .weekly-single .weekly-caption h4 a {
         font-size: 9px;
