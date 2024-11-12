@@ -463,6 +463,9 @@ body {
     border-right: 2px solid #ddd;
     margin-bottom: 0;
 }
+.content-row {
+    margin-top: 48px;
+}
 
 .page-title-left {
     padding: 2px 135px;
@@ -544,7 +547,6 @@ body {
     border-left: 5px solid #0077c2;
     padding: 10px 30px;
 }
-
 .misi-item {
     display: flex;
     align-items: center;
@@ -805,13 +807,28 @@ body {
     .tentang-title {
         border: none;
     }
+    .content-row {
+        margin-top: 20px;
+    }
     .page-title-left {
-        padding: 0 5px;
+        padding: 0.1px 5px;
         font-size: 13px;
-        margin: 0;
+        margin-top: 13px;
     }
     .headline-content {
         padding-left: 15px;
+        margin-bottom: 50px;
+    }
+    .visimisi-image {
+        display: none;
+    }
+    .content-row .col-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .visi-content, .misi-content {
+        font-size: 14px;
+        padding-left: 20px;
     }
 }
 /* Mobile View */
