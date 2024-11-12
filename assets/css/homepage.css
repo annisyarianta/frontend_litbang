@@ -830,6 +830,10 @@ body {
         font-size: 14px;
         padding-left: 20px;
     }
+    .isi-regulasi p {
+        padding: 0;
+        font-size: 15px;
+    }
 }
 /* Mobile View */
 @media (max-width: 600px) {
