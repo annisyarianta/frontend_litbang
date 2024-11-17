@@ -267,7 +267,7 @@
                                             <div class="row mb-3">
                                                 <label for="judul-inovasi-input" class="col-sm-3 col-form-label">Judul Inovasi</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="udul-inovasi-input" placeholder="Masukkan judul proposal inovasi">
+                                                    <input type="text" class="form-control" id="judul-inovasi-input" placeholder="Masukkan judul proposal inovasi">
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
@@ -281,8 +281,8 @@
                                                 <div class="col-sm-9">
                                                     <select
                                                     class="form-select" id="kategori-inovasi-input">
-                                                        <option>
-                                                            Select
+                                                        <option value="" disabled selected>
+                                                            Pilih Kategori
                                                         </option>
                                                         <option>
                                                             Inovasi
@@ -293,33 +293,74 @@
                                                 </select>
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label for="date-input" class="col-sm-3 col-form-label">Tanggal Pengajuan</label>
+											<div class="row mb-3">
+                                                <label for="opd-input" class="col-sm-3 col-form-label">OPD</label>
                                                 <div class="col-sm-9">
-                                                    <input class="form-control" type="date" value="" id="date-input" />
+                                                    <select
+                                                    class="form-select" id="opd-input">
+                                                        <option value="" disabled selected>
+                                                            Pilih OPD
+                                                        </option>
+                                                        <option>
+                                                            Balitbang Pesawaran
+                                                        </option>
+                                                        <option>
+                                                            Bappeda
+                                                        </option>
+														<option>
+                                                            Diskominfotiksan Pesawaran
+                                                        </option>
+                                                </select>
+                                                </div>
+                                            </div>
+											<div class="row mb-3">
+                                                <label for="kecamatan-input" class="col-sm-3 col-form-label">Kecamatan</label>
+                                                <div class="col-sm-9">
+                                                    <select
+                                                    class="form-select" id="kecamatan-input">
+                                                        <option value="" disabled selected>
+                                                            Pilih Kecamatan
+                                                        </option>
+                                                        <option>
+                                                            Gedong Tataan
+                                                        </option>
+                                                        <option>
+                                                            Way Lima
+                                                        </option>
+														<option>
+                                                            Negeri Katon
+                                                        </option>
+                                                </select>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Upload File Proposal</label>
+                                                <label for="file-input" class="col-sm-3 col-form-label">Upload File Proposal</label>
                                                 <div class="col-sm-9">
-                                                    <div class="fallback">
-                                                        <input name="file" type="file" multiple="multiple">
-                                                    </div>
+														<input type="file" class="form-control" id="file-input" name="file">
                                                 </div>
                                             </div>
 											<div class="row mb-5">
-                                                <label for="status-proposal-input" class="col-sm-3 col-form-label">Kategori</label>
+                                                <label for="status-input" class="col-sm-3 col-form-label">Status</label>
                                                 <div class="col-sm-9">
                                                     <select
-                                                    class="form-select" id="status-proposal-input">
-                                                    <option>
-														Draft
-													</option>    
-													<option>
-                                                            Arsip
-                                                        </option>
+                                                    class="form-select" id="status-input">
                                                         <option>
                                                             Terbit
+                                                        </option>
+                                                        <option>
+                                                            Draf
+                                                        </option>
+                                                        <option>
+                                                            Arsip
+                                                        </option>
+														<option>
+                                                            Tertunda
+                                                        </option>
+														<option>
+                                                            Tertolak
+                                                        </option>
+														<option>
+                                                            Revisi
                                                         </option>
                                                 </select>
                                                 </div>
@@ -329,7 +370,7 @@
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-end">
                                                         <button type="button" class="btn btn-secondary w-md" onclick="window.location.href='daftar-proposal.html'">Batal</button>
-                                                        <button type="submit" class="btn btn-warning w-md ms-4">Perbarui</button>
+                                                        <button type="submit" class="btn btn-primary w-md ms-4">Kirim</button>
                                                     </div>
                                                 </div>
                                             </div>
