@@ -228,7 +228,7 @@
 								<div
 									class="page-title-box d-sm-flex align-items-center justify-content-between">
 									<h3 class="mb-sm-0">
-										Tambah Gambar
+										Tambah Galeri
 									</h3>
 
 									<div class="page-title-right">
@@ -244,7 +244,7 @@
 												>
 											</li>
 											<li class="breadcrumb-item active">
-												Tambah Gambar
+												Tambah Galeri
 											</li>
 										</ol>
 									</div>
@@ -257,33 +257,43 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <form action="kelola-galeri.html">
-                                            <div class="form-group mb-3">
-                                                <label for="judul-gambar-input" class="form-label">Judul Gambar</label>
-												<input type="text" class="form-control" id="judul-gambar-input" placeholder="Masukkan judul">
-                                            </div>
-											<div class="form-group mb-5">
-                                                <label for="galeri-gambar-input" class="form-label">Upload Gambar</label>
-												<div class="dropzone" id="imageDropzone">
-													<div class="fallback">
-														<input name="file" type="file" multiple="multiple">
-													</div>
-													<div class="dz-message needsclick">
-														<div class="mb-3">
-															<i class="display-4 text-muted bx bx-cloud-upload"></i>
-														</div>
-														<h5>Drop files here or click to upload.</h5>
+											<div class="row mb-3">
+												<label for="tipe-input" class="col-sm-3 col-form-label">Tipe</label>
+												<div class="col-sm-9">
+													<select class="form-select" id="tipe-input" onchange="toggleInput()">
+														<option value="" disabled selected>Pilih Salah Satu</option>
+														<option value="gambar">Gambar</option>
+														<option value="video">Video</option>
+													</select>
+												</div>
+											</div>
+											<div class="row mb-3">
+												<label for="judul-input" class="col-sm-3 col-form-label">Judul</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="judul-input" placeholder="Masukkan judul">
+												</div>
+											</div>
+											<div class="row mb-5" id="upload-gambar" style="display: none;">
+												<label for="file-input" class="col-sm-3 col-form-label">Upload File Gambar</label>
+												<div class="col-sm-9">
+													<input type="file" class="form-control" id="file-input" name="file">
+												</div>
+											</div>
+											<div class="row mb-5" id="tautan-video" style="display: none;">
+												<label for="link-video-input" class="col-sm-3 col-form-label">Tautan Video</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="link-video-input" placeholder="Masukkan URL video">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12">
+													<div class="d-flex justify-content-end">
+														<button type="button" class="btn btn-secondary w-md" onclick="window.location.href='kelola-galeri.html'">Batal</button>
+														<button type="submit" class="btn btn-primary w-md ms-4">Kirim</button>
 													</div>
 												</div>
 											</div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="d-flex justify-content-end">
-                                                        <button type="button" class="btn btn-secondary w-md" onclick="window.location.href='kelola-galeri.html'">Batal</button>
-                                                        <button type="submit" class="btn btn-primary w-md ms-4">Kirim</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+										</form>
                                     </div>
                                 </div>
                             </div>
@@ -455,27 +465,22 @@
         <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 		<script src="assets/js/app.js"></script>
 		<script>
-			// Disable Dropzone auto-discovering all elements with .dropzone class
-			Dropzone.autoDiscover = false;
-			// Initialize Dropzone
-			var myDropzone = new Dropzone("#imageDropzone", {
-				url: "/your-upload-endpoint", // URL untuk mengupload file
-				maxFiles: 5,
-				maxFilesize: 2, // Maksimal ukuran file dalam MB
-				acceptedFiles: "image/*",
-				addRemoveLinks: true, 
-				dictRemoveFile: "Remove", 
-				thumbnailWidth: 200, 
-				thumbnailHeight: 200, 
-				init: function() {
-					this.on("success", function(file, response) {
-						console.log("File successfully uploaded!");
-					});
-					this.on("error", function(file, errorMessage) {
-						console.log("Error: " + errorMessage);
-					});
+			function toggleInput() {
+				const tipe = document.getElementById("tipe-input").value;
+				const uploadGambar = document.getElementById("upload-gambar");
+				const tautanVideo = document.getElementById("tautan-video");
+		
+				if (tipe === "gambar") {
+					uploadGambar.style.display = "flex";
+					tautanVideo.style.display = "none";
+				} else if (tipe === "video") {
+					uploadGambar.style.display = "none";
+					tautanVideo.style.display = "flex";
+				} else {
+					uploadGambar.style.display = "none";
+					tautanVideo.style.display = "none";
 				}
-			});
+			}
 		</script>
 	</body>
 </html>
