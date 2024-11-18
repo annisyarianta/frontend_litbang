@@ -256,17 +256,33 @@
                                     <div class="card-body">
                                         <form action="kelola-galeri.html">
                                             <div class="row mb-3">
-                                                <label for="judul-video-input" class="col-sm-3 col-form-label">Judul Video</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="judul-video-input" placeholder="Masukkan judul video" value="Judul Judul Judul Judul Judul Judul Judul Judul Judul">
-                                                </div>
-                                            </div>
-											<div class="row mb-5">
-                                                <label for="link-video-input" class="col-sm-3 col-form-label">Tautan Video</label>
+												<label for="tipe-input" class="col-sm-3 col-form-label">Tipe</label>
 												<div class="col-sm-9">
-													<input type="text" class="form-control" id="link-video-input" placeholder="Masukkan link video" value="https://www.youtube.com/embed/1y_kfWUCFDQ">
+													<select class="form-select" id="tipe-input" onchange="toggleInput()">
+														<option value="" disabled selected>Pilih Salah Satu</option>
+														<option value="gambar">Gambar</option>
+														<option value="video">Video</option>
+													</select>
 												</div>
-                                            </div>
+											</div>
+											<div class="row mb-3">
+												<label for="judul-input" class="col-sm-3 col-form-label">Judul</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="judul-input" placeholder="Masukkan judul">
+												</div>
+											</div>
+											<div class="row mb-5" id="upload-gambar" style="display: none;">
+												<label for="file-input" class="col-sm-3 col-form-label">Upload File Gambar</label>
+												<div class="col-sm-9">
+													<input type="file" class="form-control" id="file-input" name="file">
+												</div>
+											</div>
+											<div class="row mb-5" id="tautan-video" style="display: none;">
+												<label for="link-video-input" class="col-sm-3 col-form-label">Tautan Video</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="link-video-input" placeholder="Masukkan URL video">
+												</div>
+											</div>
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-end">
@@ -443,5 +459,23 @@
         <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
         <!-- init js -->
         <script src="assets/js/pages/form-editor.init.js"></script>
+		<script>
+			function toggleInput() {
+				const tipe = document.getElementById("tipe-input").value;
+				const uploadGambar = document.getElementById("upload-gambar");
+				const tautanVideo = document.getElementById("tautan-video");
+		
+				if (tipe === "gambar") {
+					uploadGambar.style.display = "flex";
+					tautanVideo.style.display = "none";
+				} else if (tipe === "video") {
+					uploadGambar.style.display = "none";
+					tautanVideo.style.display = "flex";
+				} else {
+					uploadGambar.style.display = "none";
+					tautanVideo.style.display = "none";
+				}
+			}
+		</script>
 	</body>
 </html>
